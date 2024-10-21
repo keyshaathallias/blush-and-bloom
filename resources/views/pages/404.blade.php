@@ -16,13 +16,13 @@
     rel="stylesheet">
 </head>
 
-<body class="bg-light font-lato">
-  <div class="flex flex-col items-center">
-    {{-- <h5 class="text-xl">You mustn’t be here!</h5> --}}
-    <img src="/asset/illustration/404.svg" alt="404" width="975">
+<body class="mt-10 bg-light font-lato">
+  <div class="container flex flex-col items-center gap-4 mx-auto">
+    <h5 class="text-xl text-secondary">You mustn’t be here!</h5>
+    <img src="/asset/illustration/404.svg" alt="404" width="900">
     <a href=""
-      class="flex gap-2 mt-7 text-base md:text-lg px-6 py-3 md:rounded-2xl rounded-[10px] text-center font-medium bg-gradient-to-br text-secondary from-[#FABC3F] via-[#FFCF6D] to-[#EEAB25] shadow-xl">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#493628"
+      class="flex gap-2 items-center mt-7 text-base md:text-lg px-6 py-3 md:rounded-2xl rounded-[10px] text-center font-medium bg-gradient-to-br text-secondary from-[#FABC3F] via-[#FFCF6D] to-[#EEAB25] shadow-xl">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#493628"
         class="bi bi-arrow-left-short" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />

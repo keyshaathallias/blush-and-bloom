@@ -1,47 +1,47 @@
 <footer class="px-10 pt-10 pb-5 bg-gradient-to-b from-secondary to-primary">
   <div class="flex flex-col items-center">
-    <div class="flex gap-32">
+    <div class="flex flex-col gap-7 md:gap-32 md:flex-row">
       {{-- Logo --}}
-      <div class="w-[280px] flex flex-col gap-2">
+      <div class="w-[280px] flex flex-col gap-2 mx-auto md:mx-0">
         <a href="/">
           <img src="/asset/illustration/logo-light.svg" alt="Blush & Bloom">
         </a>
-        <p class="text-xl text-cream">Find the Perfect Products & Treatments for Your Skin</p>
+        <p class="text-xl text-center text-cream md:text-left">Find the Perfect Products & Treatments for Your Skin</p>
       </div>
 
       {{-- Links --}}
-      <div class="flex gap-24 text-white">
+      <div class="flex flex-wrap justify-between text-white gap-y-6 md:gap-x-20 md:gap-y-8 md:flex-row md:justify-normal">
 
-        <div class="flex flex-col gap-5">
-          <h4 class="text-2xl font-bold">Quick Links</h4>
-          <div class="flex flex-col gap-2 text-xl">
-            <a href="/">Home</a>
-            <a href="/product">Products</a>
-            <a href="/treatment">Treatments</a>
-            <a href="/specialist">Our Specialists</a>
-            <a href="/reservation">Reservation</a>
+        <div class="flex flex-col gap-4 md:gap-5">
+          <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Quick Links</h4>
+          <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Home</a>
+            <a href="/product" class="transition duration-200 ease-in-out hover:text-gold">Products</a>
+            <a href="/treatment" class="transition duration-200 ease-in-out hover:text-gold">Treatments</a>
+            <a href="/specialist" class="transition duration-200 ease-in-out hover:text-gold">Our Specialists</a>
+            <a href="/reservation" class="transition duration-200 ease-in-out hover:text-gold">Reservation</a>
           </div>
         </div>
-        <div class="flex flex-col gap-5">
-          <h4 class="text-2xl font-bold">Product Categories</h4>
-          <div class="flex flex-col gap-2 text-xl">
-            <a href="/">All</a>
-            <a href="/">Face</a>
-            <a href="/">Body</a>
+        <div class="flex flex-col gap-4 md:gap-5">
+          <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Product <br> Categories</h4>
+          <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">All</a>
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Face</a>
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Body</a>
           </div>
         </div>
-        <div class="flex flex-col gap-5">
-          <h4 class="text-2xl font-bold">Treatments</h4>
-          <div class="flex flex-col gap-2 text-xl">
-            <a href="/">Whitening Program</a>
-            <a href="/">Facial Treatment</a>
-            <a href="/">Acne Free Program</a>
-            <a href="/">Body Care Spa </a>
+        <div class="flex flex-col gap-4 md:gap-5">
+          <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Treatments</h4>
+          <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Whitening Program</a>
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Facial Treatment</a>
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Acne Free Program</a>
+            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Body Care Spa </a>
           </div>
         </div>
-        <div class="flex flex-col gap-5">
-          <h4 class="text-2xl font-bold">Location</h4>
-          <div class="flex flex-col gap-2 text-xl">
+        <div class="flex flex-col gap-4 md:gap-5">
+          <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Location</h4>
+          <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
             <p>South Jakarta</p>
             <p>Bandung</p>
             <p>Surabaya</p>
@@ -55,7 +55,7 @@
 
   <div class="w-full px-2 mt-10 mb-5 border border-gold"></div>
 
-  <div class="container flex items-center justify-between mx-auto ">
+  <div class="container flex flex-col-reverse items-center justify-between gap-4 mx-auto md:flex-row md:gap-0">
     <p class="text-sm font-semibold text-white">Copyright © 2024 Blush & Bloom | All Reserved</p>
 
     <div class="flex justify-end gap-3">

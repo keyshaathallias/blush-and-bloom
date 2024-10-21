@@ -22,11 +22,17 @@ Route::get('/product', function () {
 Route::get('/treatment', function () {
     return view('pages.treatment');
 });
+Route::get('/detail-treatment', function () {
+    return view('pages.detailTreatment');
+});
 Route::get('/specialist', function () {
     return view('pages.specialist');
 });
 Route::get('/reservation', function () {
     return view('pages.reservation');
+});
+Route::get('/cart', function () {
+    return view('pages.cart');
 });
 Route::get('/404', function () {
     return view('pages.404');

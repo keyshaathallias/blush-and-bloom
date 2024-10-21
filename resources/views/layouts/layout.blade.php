@@ -18,9 +18,39 @@
 </head>
 
 <body class="bg-light font-lato">
+  @include('partials.sidebar')
   @include('partials.navbar')
-  @yield('content')
+  <div class="pt-10 lg:pt-20">
+    @yield('content')
+  </div>
   @include('partials.footer')
+
+  <script>
+    const hamburger   = document.getElementById('hamburger');
+    const closeButton = document.getElementById('close-button');
+    const sidebar     = document.getElementById('sidebar');
+    const overlay     = document.getElementById('overlay');
+    
+    function toggleSidebar() {
+      sidebar.classList.toggle('translate-x-full');
+      overlay.classList.toggle('hidden');
+    }
+
+    hamburger.addEventListener('click', function() {
+      toggleSidebar();
+      hamburger.classList.toggle('hidden');
+    });
+
+    closeButton.addEventListener('click', function() {
+      toggleSidebar();
+      hamburger.classList.toggle('hidden');
+    });
+    
+    overlay.addEventListener('click', function() {
+      toggleSidebar();
+      hamburger.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>
