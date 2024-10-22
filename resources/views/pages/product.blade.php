@@ -31,114 +31,16 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto lg:gap-7 text-primary">
 
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
+      @foreach ($products as $product)
+        <div
+          class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
+          <img src="{{ asset('storage/img/' . $product->image) }}" alt="{{ $product->name }}">
+          <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">{{ $product->name }}</h3>
+          <div class="flex flex-wrap items-center justify-between gap-1">
+            <p class="text-sm lg:text-lg">{{ 'Rp ' . number_format($product->price, 2, ',', '.') }}</p>
+          </div>
         </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <p class="text-xs lg:text-base">ADD TO BUY</p>
-        </div>
-      </div>
+      @endforeach
 
     </div>
 

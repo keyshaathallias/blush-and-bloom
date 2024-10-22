@@ -43,7 +43,8 @@
       <h2 class="text-2xl lg:text-4xl font-italic">Our <span
           class="font-bold font-playfair-display font-italic">Products</span>
       </h2>
-      <a href="/product" class="text-xs lg:text-base hover:text-[#694c37] transition duration-200 ease-in-out">View All →</a>
+      <a href="/product" class="text-xs lg:text-base hover:text-[#694c37] transition duration-200 ease-in-out">View All
+        →</a>
     </div>
 
     {{-- Categories --}}
@@ -59,50 +60,16 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto lg:gap-7 text-primary">
 
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <a href="" class="transition duration-200 ease-in-out hover:text-[#694c37]">
-            <p class="text-xs lg:text-base">ADD TO BUY</p>
-          </a>
+      @foreach ($products as $product)
+        <div
+          class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
+          <img src="{{ asset('storage/img/' . $product->image) }}" alt="{{ $product->name }}">
+          <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">{{ $product->name }}</h3>
+          <div class="flex flex-wrap items-center justify-between gap-1">
+            <p class="text-sm lg:text-lg">{{ 'Rp ' . number_format($product->price, 2, ',', '.') }}</p>
+          </div>
         </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <a href="" class="transition duration-200 ease-in-out hover:text-[#694c37]">
-            <p class="text-xs lg:text-base">ADD TO BUY</p>
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <a href="" class="transition duration-200 ease-in-out hover:text-[#694c37]">
-            <p class="text-xs lg:text-base">ADD TO BUY</p>
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/product/acne-spot.png" alt="Acne Spot">
-        <h3 class="lg:text-2xl font-semibold lg:w-[240px] w-[140px]">Acne Spot</h3>
-        <div class="flex flex-wrap items-center justify-between gap-1">
-          <p class="text-sm lg:text-lg">$12.00</p>
-          <a href="" class="transition duration-200 ease-in-out hover:text-[#694c37]">
-            <p class="text-xs lg:text-base">ADD TO BUY</p>
-          </a>
-        </div>
-      </div>
+      @endforeach
 
     </div>
 
@@ -129,7 +96,9 @@
         <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
         <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
           <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="" class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details →</a>
+          <a href=""
+            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
+            →</a>
         </div>
       </div>
       <div
@@ -137,7 +106,9 @@
         <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
         <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
           <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="" class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details →</a>
+          <a href=""
+            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
+            →</a>
         </div>
       </div>
       <div
@@ -145,7 +116,9 @@
         <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
         <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
           <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="" class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details →</a>
+          <a href=""
+            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
+            →</a>
         </div>
       </div>
       <div
@@ -153,7 +126,9 @@
         <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
         <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
           <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="" class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details →</a>
+          <a href=""
+            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
+            →</a>
         </div>
       </div>
 
@@ -184,8 +159,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -204,8 +179,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>

@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
-Route::get('/product', function () {
-    return view('pages.product');
-});
+Route::get('/', [FrontendController::class, 'showProductHome'])->name('show.product.home');
+
+Route::get('/product', [FrontendController::class, 'showProduct'])->name('show.product');
+
 Route::get('/treatment', function () {
     return view('pages.treatment');
 });
@@ -37,3 +39,21 @@ Route::get('/cart', function () {
 Route::get('/404', function () {
     return view('pages.404');
 });
+
+Route::resource('/dashboard', DashboardController::class);
+
+// Category
+Route::get('/category-dashboard', [CategoriesController::class, 'index'])->name('categories.index');
+Route::get('/create-category', [CategoriesController::class, 'create'])->name('categories.create');
+Route::post('/create-category', [CategoriesController::class, 'store'])->name('categories.store');
+Route::get('/edit-category/{slug}', [CategoriesController::class, 'edit'])->name('categories.edit');
+Route::put('/edit-category/{slug}', [CategoriesController::class, 'update'])->name('categories.update');
+Route::delete('/delete-category/{slug}', [CategoriesController::class, 'destroy'])->name('categories.destroy');
+
+// Product
+Route::get('/product-dashboard', [ProductController::class, 'index'])->name('product.index');
+Route::get('/create-product', [ProductController::class, 'create'])->name('product.create');
+Route::post('/create-product', [ProductController::class, 'store'])->name('product.store');
+Route::get('/edit-product/{slug}', [ProductController::class, 'edit'])->name('product.edit');
+Route::put('/edit-product/{slug}', [ProductController::class, 'update'])->name('product.update');
+Route::delete('/delete-product/{slug}', [ProductController::class, 'destroy'])->name('product.destroy');
