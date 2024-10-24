@@ -61,6 +61,13 @@
               <span>Product</span>
             </a>
           </li>
+          
+          <li class="sidebar-item {{ Request::is('specialist','create-specialist', 'edit-specialist/*') ? 'active' : '' }}">
+            <a href="{{ route('specialist.index') }}" class='sidebar-link'>
+              <i class="bi bi-box-seam-fill"></i>
+              <span>Specialist</span>
+            </a>
+          </li>
   
           <li class="sidebar-item">
             <a href="#" class='sidebar-link'>

@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SpecialistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,3 +58,11 @@ Route::post('/create-product', [ProductController::class, 'store'])->name('produ
 Route::get('/edit-product/{slug}', [ProductController::class, 'edit'])->name('product.edit');
 Route::put('/edit-product/{slug}', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/delete-product/{slug}', [ProductController::class, 'destroy'])->name('product.destroy');
+
+// Specialist
+Route::get('/specialist-dashboard', [SpecialistController::class, 'index'])->name('specialist.index');
+Route::get('/create-specialist', [SpecialistController::class, 'create'])->name('specialist.create');
+Route::post('/create-specialist', [SpecialistController::class, 'store'])->name('specialist.store');
+Route::get('/edit-specialist/{slug}', [SpecialistController::class, 'edit'])->name('specialist.edit');
+Route::put('/edit-specialist/{slug}', [SpecialistController::class, 'update'])->name('specialist.update');
+Route::delete('/delete-specialist/{slug}', [SpecialistController::class, 'destroy'])->name('specialist.destroy');
