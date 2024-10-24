@@ -75,6 +75,13 @@
               <span>Specialist</span>
             </a>
           </li>
+          
+          <li class="sidebar-item {{ Request::is('reservation-dashboard', 'edit-reservation/*') ? 'active' : '' }}">
+            <a href="{{ route('reservation.dashboard') }}" class='sidebar-link'>
+              <i class="bi bi-journal-bookmark-fill"></i>
+              <span>Reservation</span>
+            </a>
+          </li>
   
           <li class="sidebar-item">
             <a href="#" class='sidebar-link'>

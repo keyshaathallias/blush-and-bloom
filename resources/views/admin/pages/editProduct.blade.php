@@ -87,13 +87,6 @@
                                 </option>
                               @endforeach
                             </select>
-                            {{-- <select name="categories_id" id="categories_id" class="form-control">
-                              <option selected>Choose Category</option>
-                              <option value="Face" {{ $product->categories->category == 'Face' ? 'selected' : '' }}>Face
-                              </option>
-                              <option value="Body" {{ $product->categories->category == 'Body' ? 'selected' : '' }}>Body
-                              </option>
-                            </select> --}}
                           </div>
                           @error('categories_id')
                             <small>{{ $message }}</small>

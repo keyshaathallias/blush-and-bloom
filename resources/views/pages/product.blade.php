@@ -8,25 +8,26 @@
     <div class="flex items-center justify-between text-secondary">
       <h2 class="text-2xl md:text-4xl font-italic">Our <span
           class="font-bold font-playfair-display font-italic">Products</span></h2>
-      <a href="/cart" class="flex items-center gap-1 text-base md:gap-2 md:text-2xl">
+      {{-- <a href="/cart" class="flex items-center gap-1 text-base md:gap-2 md:text-2xl">
         Cart
         <svg xmlns="http://www.w3.org/2000/svg" class="md:size-6 size-4" fill="#493628" class="bi bi-cart2"
           viewBox="0 0 16 16">
           <path
             d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
         </svg>
-      </a>
+      </a> --}}
+      {{-- Categories --}}
+      <div class="flex gap-3 overflow-x-auto lg:gap-10">
+        <a href=""
+          class="py-1 text-sm rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary bg-cream">All</a>
+        @foreach ($categories as $category)
+          <a href=""
+            class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">{{ $category->category }}</a>
+        @endforeach
+      </div>
     </div>
 
-    {{-- Categories --}}
-    <div class="flex gap-3 my-5 overflow-x-auto lg:gap-10 lg:my-7">
-      <a href=""
-        class="py-1 text-sm rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary bg-cream">All</a>
-      <a href=""
-        class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">Face</a>
-      <a href=""
-        class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">Body</a>
-    </div>
+
 
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto lg:gap-7 text-primary">
@@ -70,8 +71,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -90,8 +91,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -110,8 +111,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -127,16 +128,15 @@
         </div>
 
       </div>
-      <div class="flex items-center justify-center gap-12 animate-loop-scroll-left group-hover:paused"
-        aria-hidden="true">
+      <div class="flex items-center justify-center gap-12 animate-loop-scroll-left group-hover:paused" aria-hidden="true">
 
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -155,8 +155,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
