@@ -17,38 +17,26 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-7 mt-7">
 
-      <div
+      {{-- <div
         class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
+        <img src={{ asset('asset/product/anti-aging-serum.png') }}" alt="" class="rounded-md">
         <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="/detail-treatment" class="text-sm lg:text-base text-secondary">Details →</a>
+          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]"></h3>
+          <a href="" class="text-sm lg:text-base text-secondary">Details →</a>
         </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="/detail-treatment" class="text-sm lg:text-base text-secondary">Details →</a>
+      </div> --}}
+
+      @foreach ($treatments as $treatment)
+        <div
+          class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
+          <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}" class="rounded-md">
+          <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
+            <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">{{ $treatment->name }}</h3>
+            <a href="{{ route('detail.treatment.show', $treatment->slug) }}"
+              class="text-sm lg:text-base text-secondary">Details →</a>
+          </div>
         </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="/detail-treatment" class="text-sm lg:text-base text-secondary">Details →</a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href="/detail-treatment" class="text-sm lg:text-base text-secondary">Details →</a>
-        </div>
-      </div>
+      @endforeach
 
     </div>
   </div>
@@ -161,8 +149,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>

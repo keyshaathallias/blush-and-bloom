@@ -13,26 +13,6 @@
   <div class="page-content">
     <section>
       <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="px-4 card-body py-4-5">
-              <div class="flex items-center justify-center text-center row">
-                <div class="flex justify-center col-md-4 col-lg-12 col-xl-12 col-xxl-5">
-                  <div class="mb-2 stats-icon blue">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                      class="bi bi-bookmark-fill" viewBox="0 0 16 16">
-                      <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                  <h6 class="font-semibold text-muted">Category</h6>
-                  <h6 class="mb-0 font-extrabold">{{ number_format($totalCategory) }}</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col">
           <div class="card">
@@ -55,13 +35,78 @@
             </div>
           </div>
         </div>
+        
+        <div class="col">
+          <div class="card">
+            <div class="px-4 card-body py-4-5">
+              <div class="flex items-center justify-center text-center row">
+                <div class="flex justify-center col-md-4 col-lg-12 col-xl-12 col-xxl-5">
+                  <div class="mb-2 stats-icon blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                      class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                      <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                  <h6 class="font-semibold text-muted">Category</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalCategory) }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card">
+            <div class="px-4 card-body py-4-5">
+              <div class="flex items-center justify-center text-center row">
+                <div class="flex justify-center col-md-4 col-lg-12 col-xl-12 col-xxl-5">
+                  <div class="mb-2 stats-icon purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                      class="bi bi-box-seam-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                  <h6 class="font-semibold text-muted">Treatment</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalTreatment) }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card">
+            <div class="px-4 card-body py-4-5">
+              <div class="flex items-center justify-center text-center row">
+                <div class="flex justify-center col-md-4 col-lg-12 col-xl-12 col-xxl-5">
+                  <div class="mb-2 stats-icon green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                      class="bi bi-box-seam-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
+                  <h6 class="font-semibold text-muted">Specialist</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalSpecialist) }}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="col">
           <div class="card">
             <div class="px-4 card-body py-4-5">
               <div class="flex items-center justify-center text-center row">
                 <div class="flex justify-center col-md-4 col-lg-12 col-xl-12 col-xxl-5 ">
-                  <div class="mb-2 stats-icon green">
+                  <div class="mb-2 stats-icon red">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                       class="bi bi-person-fill" viewBox="0 0 16 16">
                       <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />

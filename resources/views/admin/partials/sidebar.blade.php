@@ -48,23 +48,30 @@
             </a>
           </li>
           
-          <li class="sidebar-item {{ Request::is('category', 'create-category', 'edit-category/*') ? 'active' : '' }}">
-            <a href="{{ route('categories.index') }}" class='sidebar-link'>
-              <i class="bi bi-bookmark-fill"></i>
-              <span>Category</span>
-            </a>
-          </li>
-          
-          <li class="sidebar-item {{ Request::is('product','create-product', 'edit-product/*') ? 'active' : '' }}">
+          <li class="sidebar-item {{ Request::is('product-dashboard','create-product', 'edit-product/*') ? 'active' : '' }}">
             <a href="{{ route('product.index') }}" class='sidebar-link'>
               <i class="bi bi-box-seam-fill"></i>
               <span>Product</span>
             </a>
           </li>
           
-          <li class="sidebar-item {{ Request::is('specialist','create-specialist', 'edit-specialist/*') ? 'active' : '' }}">
+          <li class="sidebar-item {{ Request::is('category-dashboard', 'create-category', 'edit-category/*') ? 'active' : '' }}">
+            <a href="{{ route('categories.index') }}" class='sidebar-link'>
+              <i class="bi bi-bookmark-fill"></i>
+              <span>Product Category</span>
+            </a>
+          </li>
+          
+          <li class="sidebar-item {{ Request::is('treatment-dashboard','create-treatment', 'edit-treatment/*') ? 'active' : '' }}">
+            <a href="{{ route('treatment.index') }}" class='sidebar-link'>
+              <i class="bi bi-balloon-heart-fill"></i>
+              <span>Treatment</span>
+            </a>
+          </li>
+          
+          <li class="sidebar-item {{ Request::is('specialist-dashboard','create-specialist', 'edit-specialist/*') ? 'active' : '' }}">
             <a href="{{ route('specialist.index') }}" class='sidebar-link'>
-              <i class="bi bi-box-seam-fill"></i>
+              <i class="bi bi-people-fill"></i>
               <span>Specialist</span>
             </a>
           </li>

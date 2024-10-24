@@ -17,43 +17,14 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto md:gap-5 lg:gap-7 text-primary">
 
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-1.png" alt="Dr. Sophia Hartwell">
-        <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">Dr. Sophia Hartwell</h3>
-        <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">Specialist in Acne Treatment & Skincare</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-2.png" alt="Dr. Grace Williams">
-        <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">Dr. Grace Williams</h3>
-        <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">Whitening & Anti-aging Facial Care</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-3.png" alt="Dr. Michael Lawson">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Michael Lawson</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Specialist in Acne & Skincare Solutions</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-4.png" alt="Dr. Isabella Monroe">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Isabella Monroe</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Facial Treatments & Anti-aging</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-5.png" alt="Dr. Noah Patel">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Noah Patel</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Specialist in Whitening & Brightening
-          Programs</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-6.png" alt="Dr. Elena Rivera">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Elena Rivera</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Body Care & Spa Treatments</p>
-      </div>
+      @foreach ($specialists as $specialist)
+        <div
+          class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
+          <img src="{{ asset('storage/img/' . $specialist->image) }}" alt="{{ $specialist->name }}">
+          <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">{{ $specialist->name }}</h3>
+          <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">{{ $specialist->description }}</p>
+        </div>
+      @endforeach
 
     </div>
 

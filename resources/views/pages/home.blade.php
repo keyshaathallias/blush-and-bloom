@@ -91,46 +91,16 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-7 mt-7">
 
-      <div
-        class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href=""
-            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
-            →</a>
+      @foreach ($treatments as $treatment)
+        <div
+          class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
+          <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}" class="rounded-md">
+          <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
+            <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">{{ $treatment->name }}</h3>
+            <a href="{{ route('detail.treatment.show', $treatment->slug) }}" class="text-sm lg:text-base text-secondary">Details →</a>
+          </div>
         </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href=""
-            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
-            →</a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href=""
-            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
-            →</a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-[518px] md:w-[350px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]">Whitening Program</h3>
-          <a href=""
-            class="text-sm lg:text-base text-secondary hover:text-[#694c37] transition duration-200 ease-in-out">Details
-            →</a>
-        </div>
-      </div>
+      @endforeach
 
     </div>
   </div>
@@ -199,8 +169,8 @@
           <div class="flex flex-col gap-2">
             <img src="/asset/testimonial/person-1.png" alt="Person 1">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
-                class="bi bi-star-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
+                viewBox="0 0 16 16">
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
               </svg>
@@ -216,8 +186,7 @@
         </div>
 
       </div>
-      <div class="flex items-center justify-center gap-12 animate-loop-scroll-left group-hover:paused"
-        aria-hidden="true">
+      <div class="flex items-center justify-center gap-12 animate-loop-scroll-left group-hover:paused" aria-hidden="true">
 
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
@@ -436,43 +405,14 @@
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto md:gap-5 lg:gap-7 text-primary">
 
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-1.png" alt="Dr. Sophia Hartwell">
-        <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">Dr. Sophia Hartwell</h3>
-        <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">Specialist in Acne Treatment & Skincare</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-2.png" alt="Dr. Grace Williams">
-        <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">Dr. Grace Williams</h3>
-        <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">Whitening & Anti-aging Facial Care</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-3.png" alt="Dr. Michael Lawson">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Michael Lawson</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Specialist in Acne & Skincare Solutions</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-4.png" alt="Dr. Isabella Monroe">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Isabella Monroe</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Facial Treatments & Anti-aging</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-5.png" alt="Dr. Noah Patel">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Noah Patel</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Specialist in Whitening & Brightening
-          Programs</p>
-      </div>
-      <div
-        class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
-        <img src="/asset/specialist/specialist-6.png" alt="Dr. Elena Rivera">
-        <h3 class="lg:text-xl text-base font-semibold md:w-[190px] lg:w-[240px] w-[130px]">Dr. Elena Rivera</h3>
-        <p class="text-xs lg:text-base md:w-[190px] lg:w-[240px] w-[130px]">Body Care & Spa Treatments</p>
-      </div>
+      @foreach ($specialists as $specialist)
+        <div
+          class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
+          <img src="{{ asset('storage/img/' . $specialist->image) }}" alt="{{ $specialist->name }}">
+          <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">{{ $specialist->name }}</h3>
+          <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">{{ $specialist->description }}</p>
+        </div>
+      @endforeach
 
     </div>
 

@@ -3,21 +3,11 @@
 @section('content')
   {{-- Detail Treatment --}}
   <div class="container py-10 mx-auto md:py-12 px-7 lg:px-10">
-    <h1 class="lg:text-[32px] text-2xl font-bold text-center text-secondary lg:mb-9 mb-5">Whitening Program</h1>
+    <h1 class="lg:text-[32px] text-2xl font-bold text-center text-secondary lg:mb-9 mb-5">{{ $treatment->name }}</h1>
     <div class="flex flex-col items-center justify-center gap-5 lg:items-start md:gap-7 lg:flex-row">
-      <img src="/asset/treatment/whitening-program.png" alt="Whitening Program">
+      <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}" class="w-full md:w-[350px] rounded-md">
       <p class="text-lg text-gray">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-        <br>
-        <br>
-        - Lorem ipsum dolor sit amet. <br>
-        - Consectetur adipiscing elit. <br>
-        - Sed do eiusmod tempor incididunt. <br>
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        {{ $treatment->description }}
       </p>
     </div>
   </div>
