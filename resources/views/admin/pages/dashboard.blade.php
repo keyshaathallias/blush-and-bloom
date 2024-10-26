@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                   <h6 class="font-semibold text-muted">Account</h6>
-                  <h6 class="mb-0 font-extrabold">{{ number_format($totalTreatment) }}</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalUser) }}</h6>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                   <h6 class="font-semibold text-muted">Pending Reservation</h6>
-                  <h6 class="mb-0 font-extrabold">{{ number_format($pendingReservations) }}</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalPendingReservations) }}</h6>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@
                 </div>
                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                   <h6 class="font-semibold text-muted">Confirmed Reservation</h6>
-                  <h6 class="mb-0 font-extrabold">{{ number_format($confirmedReservations) }}</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalConfirmedReservations) }}</h6>
                 </div>
               </div>
             </div>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                   <h6 class="font-semibold text-muted">Completed Reservation</h6>
-                  <h6 class="mb-0 font-extrabold">{{ number_format($completedReservations) }}</h6>
+                  <h6 class="mb-0 font-extrabold">{{ number_format($totalCompletedReservations) }}</h6>
                 </div>
               </div>
             </div>
@@ -172,19 +172,19 @@
         </div>
       </div>
 
-      <!-- Table Data Categories -->
+      <!-- Table Data Product -->
       <section class="section">
         <div class="row" id="table-striped">
           <div class="col-12">
-            <div class="card ">
+            <div class="card">
               <div class="flex flex-wrap card-header">
                 <div class="order-first col-12 col-md-6 order-md-1">
-                  <h3>Categories</h3>
+                  <h3>Product</h3>
                 </div>
                 <div class="order-last col-12 col-md-6 order-md-2">
                   <div class="float-start float-lg-end">
-                    <a href="" class="float-right m-auto btn btn-primary">Add
-                      Category</a>
+                    <a href="{{ route('product.create') }}" class="float-right m-auto btn btn-primary">Add
+                      Product</a>
                   </div>
                 </div>
               </div>
@@ -194,18 +194,41 @@
                     <thead class="table-responsive">
                       <tr>
                         <th>No.</th>
+                        <th>Image</th>
                         <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Category</th>
                       </tr>
                     </thead>
                     <tbody class="table-responsive">
-                      @foreach ($categories as $category)
+                      @if ($products->isEmpty())
                         <tr>
-                          <td>{{ $loop->iteration }}</td>
+                          <td colspan="7" class="text-center">
+                            <div class="flex flex-col items-center justify-center text-center">
+                              {{-- <img src="/img/Product-animate.svg" alt="No Product Yet" width="300"> --}}
+                              <p>No Products Available Yet</p>
+                            </div>
+                          </td>
                         </tr>
-                      @endforeach
+                      @else
+                        @foreach ($products as $product)
+                          <tr>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>
+                              <img src="{{ asset('storage/img/' . $product->image) }}" alt="{{ $product->name }}"
+                                width="250">
+                            </td>
+                            <td>{{ $product->name }}</td>
+                            <td>{{ 'Rp ' . number_format($product->price, 2, ',', '.') }}</td>
+                            <td>{{ $product->description }}</td>
+                            <td>{{ $product->categories->category }}</td>
+                          </tr>
+                        @endforeach
+                      @endif
                     </tbody>
                   </table>
-                  <a href="" class="text-sm">See more data →</a>
+                  <a href="{{ route('product.index') }}" class="text-sm">See more data →</a>
                 </div>
               </div>
             </div>
@@ -213,13 +236,21 @@
         </div>
       </section>
 
-      <!-- Table Data Payment -->
+      <!-- Table Data Specialist -->
       <section class="section">
         <div class="row" id="table-striped">
           <div class="col-12">
             <div class="card ">
               <div class="flex flex-wrap card-header">
-                <h3>Payment</h3>
+                <div class="order-first col-12 col-md-6 order-md-1">
+                  <h3>Specialist</h3>
+                </div>
+                <div class="order-last col-12 col-md-6 order-md-2">
+                  <div class="float-start float-lg-end">
+                    <a href="{{ route('specialist.create') }}" class="float-right m-auto btn btn-primary">Add
+                      Specialist</a>
+                  </div>
+                </div>
               </div>
               <div class="card-body card-content">
                 <div class="table-responsive">
@@ -227,58 +258,97 @@
                     <thead class="table-responsive">
                       <tr>
                         <th>No.</th>
+                        <th>Image</th>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>Destination</th>
-                        <th>Ticket Price</th>
-                        <th>Quantity</th>
-                        <th>Total Price</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Description</th>
                       </tr>
                     </thead>
                     <tbody class="table-responsive">
-                      {{-- @if ($payment->isEmpty())
+                      @if ($specialists->isEmpty())
                         <tr>
-                          <td colspan="9" class="text-center">
+                          <td colspan="5" class="text-center">
                             <div class="flex flex-col items-center justify-center text-center">
-                              <img src="/img/no-data-animate.svg" alt="No Payment Yet" width="300">
-                              <p>No Payments Available Yet</p>
+                              {{-- <img src="/img/Specialist-animate.svg" alt="No Specialist Yet" width="300"> --}}
+                              <p>No Specialists Available Yet</p>
                             </div>
                           </td>
                         </tr>
                       @else
-                        @if ($payment->isEmpty())
+                        @foreach ($specialists as $specialist)
                           <tr>
-                            <td colspan="10" class="text-center">
-                              <div class="flex flex-col items-center justify-center text-center">
-                                <img src="/img/no-data-animate.svg" alt="No Payment Yet" width="300">
-                                <p>No Payments Has Been Made Yet</p>
-                              </div>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>
+                              <img src="{{ asset('storage/img/' . $specialist->image) }}"
+                                alt="{{ $specialist->name }}" width="250">
                             </td>
+                            <td>{{ $specialist->name }}</td>
+                            <td>{{ $specialist->description }}</td>
                           </tr>
-                        @else
-                          @foreach ($payment as $payment)
-                            <tr>
-                              <td>{{ $loop->iteration }}.</td>
-                              <td>{{ $payment->user->name }}</td>
-                              <td>{{ $payment->user->email }}</td>
-                              <td>{{ $payment->destination->name }}</td>
-                              <td>{{ 'Rp ' . number_format($payment->destination->ticket_price, 2, ',', '.') }}</td>
-                              <td>{{ $payment->cart->quantity }}</td>
-                              <td>{{ 'Rp ' . number_format($payment->cart->total(), 2, ',', '.') }}</td>
-                              <td>{{ $payment->status }}</td>
-                              <td>
-                                <a href="{{ route('payment.show', $payment->id) }}" class="btn btn-primary"><i
-                                    class="bi bi-eye-fill"></i></a>
-                              </td>
-                            </tr>
-                          @endforeach
-                        @endif
-                      @endif --}}
+                        @endforeach
+                      @endif
                     </tbody>
                   </table>
-                  <a href="" class="text-sm">See more data →</a>
+                  <a href="{{ route('specialist.index') }}" class="text-sm">See more data →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table Data Treatment -->
+      <section class="section">
+        <div class="row" id="table-striped">
+          <div class="col-12">
+            <div class="card ">
+              <div class="flex flex-wrap card-header">
+                <div class="order-first col-12 col-md-6 order-md-1">
+                  <h3>Treatment</h3>
+                </div>
+                <div class="order-last col-12 col-md-6 order-md-2">
+                  <div class="float-start float-lg-end">
+                    <a href="{{ route('treatment.create') }}" class="float-right m-auto btn btn-primary">Add
+                      Treatment</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body card-content">
+                <div class="table-responsive">
+                  <table class="table mb-3 table-striped table-bordered table-hover">
+                    <thead class="table-responsive">
+                      <tr>
+                        <th>No.</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-responsive">
+                      @if ($treatments->isEmpty())
+                        <tr>
+                          <td colspan="5" class="text-center">
+                            <div class="flex flex-col items-center justify-center text-center">
+                              {{-- <img src="/img/Treatment-animate.svg" alt="No Treatment Yet" width="300"> --}}
+                              <p>No Treatments Available Yet</p>
+                            </div>
+                          </td>
+                        </tr>
+                      @else
+                        @foreach ($treatments as $treatment)
+                          <tr>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>
+                              <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}"
+                                width="250">
+                            </td>
+                            <td>{{ $treatment->name }}</td>
+                            <td>{{ $treatment->description }}</td>
+                          </tr>
+                        @endforeach
+                      @endif
+                    </tbody>
+                  </table>
+                  <a href="{{ route('treatment.index') }}" class="text-sm">See more data →</a>
                 </div>
               </div>
             </div>
@@ -297,7 +367,8 @@
                 </div>
                 <div class="order-last col-12 col-md-6 order-md-2">
                   <div class="float-start float-lg-end">
-                    <a href="#" class="float-right m-auto btn btn-primary">Add Account</a>
+                    <a href="{{ route('account.create') }}" class="float-right m-auto btn btn-primary">Add
+                      Account</a>
                   </div>
                 </div>
               </div>
@@ -310,39 +381,148 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody class="table-responsive">
-                      {{-- @if ($users->isEmpty())
+                      @if ($users->isEmpty())
                         <tr>
                           <td colspan="5" class="text-center">
                             <div class="flex flex-col items-center justify-center text-center">
-                              <img src="/img/no-data-animate.svg" alt="No Data Yet" width="300">
                               <p>No Accounts Available Yet</p>
                             </div>
                           </td>
                         </tr>
                       @else
-                        @foreach ($user as $user)
+                        @foreach ($users as $user)
                           <tr>
                             <td>{{ $loop->iteration }}.</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->roles }}</td>
-                            <td>
-                              <a href="/" class="btn btn-warning"><i
-                                  class="bi bi-pencil-fill"></i></a>
-                              <a href="/" class="btn btn-danger lg:ms-2"
-                                data-confirm-delete="true">
-                                <i class="bi bi-trash3-fill"></i></a>
-                            </td>
                           </tr>
                         @endforeach
-                      @endif --}}
+                      @endif
                     </tbody>
                   </table>
-                  <a href="#" class="text-sm">See more data →</a>
+                  <a href="{{ route('account.index') }}" class="text-sm">See more data →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table Data Reservation -->
+      <section class="section">
+        <div class="row" id="table-striped">
+          <div class="col-12">
+            <div class="card ">
+              <div class="flex flex-wrap card-header">
+                <div class="order-first col-12 col-md-6 order-md-1">
+                  <h3>Reservation</h3>
+                </div>
+              </div>
+              <div class="card-body card-content">
+                <div class="table-responsive">
+                  <!-- Tabel Pending -->
+                  <h5>Pending Reservations</h5>
+                  <table class="table mb-0 table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Treatment</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach ($pendingReservations as $reservation)
+                        <tr>
+                          <td>{{ $loop->iteration }}.</td>
+                          <td>{{ $reservation->first_name }}</td>
+                          <td>{{ $reservation->last_name }}</td>
+                          <td>{{ $reservation->phone_number }}</td>
+                          <td>{{ $reservation->email }}</td>
+                          <td>{{ $reservation->date }}</td>
+                          <td>{{ $reservation->treatment->name }}</td>
+                          <td>{{ $reservation->message }}</td>
+                          <td>{{ $reservation->status }}</td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+
+                  <!-- Tabel Confirmed -->
+                  <h5 class="mt-5">Confirmed Reservations</h5>
+                  <table class="table mb-5 table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Treatment</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach ($confirmedReservations as $reservation)
+                        <tr>
+                          <td>{{ $loop->iteration }}.</td>
+                          <td>{{ $reservation->first_name }}</td>
+                          <td>{{ $reservation->last_name }}</td>
+                          <td>{{ $reservation->phone_number }}</td>
+                          <td>{{ $reservation->email }}</td>
+                          <td>{{ $reservation->date }}</td>
+                          <td>{{ $reservation->treatment->name }}</td>
+                          <td>{{ $reservation->message }}</td>
+                          <td>{{ $reservation->status }}</td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+
+                  <!-- Tabel Completed -->
+                  <h5>Completed Reservations</h5>
+                  <table class="table mb-0 table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Treatment</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach ($completedReservations as $reservation)
+                        <tr>
+                          <td>{{ $loop->iteration }}.</td>
+                          <td>{{ $reservation->first_name }}</td>
+                          <td>{{ $reservation->last_name }}</td>
+                          <td>{{ $reservation->phone_number }}</td>
+                          <td>{{ $reservation->email }}</td>
+                          <td>{{ $reservation->date }}</td>
+                          <td>{{ $reservation->treatment->name }}</td>
+                          <td>{{ $reservation->message }}</td>
+                          <td>{{ $reservation->status }}</td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+
                 </div>
               </div>
             </div>

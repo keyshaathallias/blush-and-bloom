@@ -83,14 +83,14 @@
             </a>
           </li>
   
-          <li class="sidebar-item">
-            <a href="#" class='sidebar-link'>
+          <li class="sidebar-item {{ Request::is('account-dashboard', 'create-account', 'edit-account/*') ? 'active' : '' }}">
+            <a href="{{ route('account.index') }}" class='sidebar-link'>
               <i class="bi bi-person-fill"></i>
               <span>Account Management</span>
             </a>
           </li>
   
-          <form action="#" method="post" class="mt-5 sidebar-item">
+          <form action="{{ route('logout') }}" method="post" class="mt-5 sidebar-item">
             @csrf
             <button type="submit" href="#" class='text-white btn sidebar-link bg-danger w-100'>
               <i class="text-white bi bi-box-arrow-right"></i>

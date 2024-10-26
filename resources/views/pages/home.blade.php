@@ -17,9 +17,6 @@
         praesentium delectus pariatur maiores earum eligendi iure voluptatum.</p>
 
       <div class="flex flex-wrap items-center justify-center gap-5 mt-5 md:justify-start">
-        {{-- <a href=""
-          class="text-base lg:text-lg px-6 py-3 text-secondary lg:rounded-2xl rounded-[10px] text-center font-medium bg-gold shadow-xl shadow-[#583B34] hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold">
-          Explore Products</a> --}}
         <a href="{{ route('product.show') }}"
           class="text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-gold border-2 text-gold shadow-xl shadow-[#583B34] bg-transparent hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold">
           Explore <span class="font-bold font-playfair-display">Products</span></a>
@@ -39,7 +36,7 @@
   <div class="container mx-auto my-10 px-7 lg:px-10 md:my-16">
 
     {{-- Heading --}}
-    <div class="flex items-center justify-between text-secondary">
+    <div class="flex items-center justify-between text-secondary mb-5">
       <h2 class="text-2xl lg:text-4xl font-italic">Our <span
           class="font-bold font-playfair-display font-italic">Products</span>
       </h2>
@@ -47,16 +44,6 @@
         class="text-xs lg:text-base hover:text-[#694c37] transition duration-200 ease-in-out">View All
         →</a>
     </div>
-
-    {{-- Categories --}}
-    {{-- <div class="flex gap-3 my-5 overflow-x-auto lg:gap-10 lg:my-7">
-      <a href=""
-        class="py-1 text-sm rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary bg-cream">All</a>
-      <a href=""
-        class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">Face</a>
-      <a href=""
-        class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">Body</a>
-    </div> --}}
 
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-4 mx-auto lg:gap-7 text-primary">

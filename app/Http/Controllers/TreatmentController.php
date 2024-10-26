@@ -41,16 +41,6 @@ class TreatmentController extends Controller
         return redirect()->route('treatment.index');
     }
 
-    // public function showTreatment() {
-    //     $treatments = Treatment::all();
-    //     return view('pages.treatment', compact('treatments'));
-    // }
-
-    // public function showDetailTreatment(string $slug) {
-    //     $treatment = Treatment::where('slug', $slug)->firstOrFail();
-    //     return view('pages.detailTreatment', compact('treatment'));
-    // }
-
     public function edit(string $slug) {
         $treatment = Treatment::where('slug', $slug)->firstOrFail();
         return view('admin.pages.editTreatment', compact('treatment'));

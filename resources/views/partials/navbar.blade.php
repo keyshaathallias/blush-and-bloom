@@ -1,8 +1,6 @@
 <nav
   class="fixed top-0 z-10 flex items-center justify-between w-full gap-2 py-5 bg-white shadow-sm lg:gap-0 px-7 lg:px-10 lg:py-6">
 
-  {{-- <div class="flex-grow block lg:hidden"></div> --}}
-
   <div class="hidden lg:block">
     <ul class="flex items-center justify-between gap-10 text-lg text-secondary">
       <a href="/" class="transition duration-200 ease-in-out hover:text-gold">
