@@ -41,17 +41,19 @@
   <script src="/dist/assets/extensions/apexcharts/apexcharts.min.js"></script>
   <script src="/dist/assets/static/js/pages/dashboard.js"></script>
 
-</body>
-{{-- @include('sweetalert::alert') --}}
-<script>
-  document.getElementById('togglePassword').addEventListener('click', function() {
-    const passwordField = document.getElementById('password');
-    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', type);
+  <script>
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const passwordField = document.getElementById('password');
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
 
-    this.classList.toggle('bi-eye-fill');
-    this.classList.toggle('bi-eye-slash-fill');
-  });
-</script>
+      this.classList.toggle('bi-eye-fill');
+      this.classList.toggle('bi-eye-slash-fill');
+    });
+  </script>
+
+  {{-- @include('sweetalert::alert') --}}
+</body>
+
 
 </html>

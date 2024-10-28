@@ -17,14 +17,14 @@
         </svg>
       </a> --}}
       {{-- Categories --}}
-      <div class="flex gap-3 overflow-x-auto lg:gap-10">
+      {{-- <div class="flex gap-3 overflow-x-auto lg:gap-10">
         <a href=""
           class="py-1 text-sm rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary bg-cream">All</a>
         @foreach ($categories as $category)
           <a href=""
             class="py-1 text-sm border rounded-full px-7 lg:text-xl lg:py-1 lg:px-10 font-playfair-display font-italic text-secondary border-secondary">{{ $category->category }}</a>
         @endforeach
-      </div>
+      </div> --}}
     </div>
 
 
