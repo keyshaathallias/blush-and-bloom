@@ -52,7 +52,7 @@
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[1010px] lg:w-[803px] md:w-[702px] w-[300px] text-sm lg:text-base">
-          <textarea class="w-full px-6 py-4 bg-white border border-cream rounded-xl" name="clientMessage" id="message"
+          <textarea class="w-full px-6 py-4 bg-white border border-cream rounded-xl" name="message" id="message"
             cols="30" rows="10" placeholder="Message"></textarea>
         </div>
       </div>
