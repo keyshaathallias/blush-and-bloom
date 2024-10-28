@@ -12,19 +12,19 @@
   </button>
 
   <ul class="flex flex-col gap-6 text-center text-white">
-    <a href="/" class="transition duration-200 ease-in-out hover:text-gold">
+    <a href="/" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('/') ? 'font-bold text-gold' : 'hover:text-cream' }}">
       <li>Home</li>
     </a>
-    <a href="/product" class="transition duration-200 ease-in-out hover:text-gold">
+    <a href="/product" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('product') ? 'font-bold text-gold' : 'hover:text-cream' }}">
       <li>Products</li>
     </a>
-    <a href="/treatment" class="transition duration-200 ease-in-out hover:text-gold">
+    <a href="/treatment" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('treatment') ? 'font-bold text-gold' : 'hover:text-cream' }}">
       <li>Treatments</li>
     </a>
-    <a href="/specialist" class="transition duration-200 ease-in-out hover:text-gold">
+    <a href="/specialist" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('specialist') ? 'font-bold text-gold' : 'hover:text-cream' }}">
       <li>Our Specialists</li>
     </a>
-    <a href="/reservation" class="transition duration-200 ease-in-out hover:text-gold">
+    <a href="/reservation" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('reservation') ? 'font-bold text-gold' : 'hover:text-cream' }}">
       <li>Reservation</li>
     </a>
   </ul>

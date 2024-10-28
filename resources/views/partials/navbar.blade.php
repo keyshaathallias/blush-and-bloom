@@ -3,13 +3,13 @@
 
   <div class="hidden lg:block">
     <ul class="flex items-center justify-between gap-10 text-lg text-secondary">
-      <a href="/" class="transition duration-200 ease-in-out hover:text-gold">
+      <a href="/" class="transition duration-200 ease-in-out hover:text-gold {{ Request::is('/') ? 'font-bold text-primary' : '' }}">
         <li>Home</li>
       </a>
-      <a href="/product" class="transition duration-200 ease-in-out hover:text-gold">
+      <a href="/product" class="transition duration-200 ease-in-out hover:text-gold {{ Request::is('product') ? 'font-bold text-primary' : '' }}">
         <li>Products</li>
       </a>
-      <a href="/treatment" class="transition duration-200 ease-in-out hover:text-gold">
+      <a href="/treatment" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('treatment') ? 'font-bold text-primary' : '' }}">
         <li>Treatments</li>
       </a>
     </ul>
@@ -21,10 +21,10 @@
 
   <div class="hidden lg:block">
     <ul class="flex items-center justify-between gap-10 text-lg text-secondary">
-      <a href="/specialist" class="transition duration-200 ease-in-out hover:text-gold">
+      <a href="/specialist" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('specialist') ? 'font-bold text-primary' : '' }}">
         <li>Our Specialists</li>
       </a>
-      <a href="/reservation" class="transition duration-200 ease-in-out hover:text-gold">
+      <a href="/reservation" class="transition duration-200 ease-in-out hover:text-gold  {{ Request::is('reservation') ? 'font-bold text-primary' : '' }}">
         <li>Reservation</li>
       </a>
     </ul>
