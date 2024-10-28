@@ -434,7 +434,7 @@
                   </li>
                 </ul>
 
-                <div class="table-responsive">
+                <div class="table-responsive mb-3">
 
                   <!-- Tabel Pending -->
                   <div id="pending" class="tab-content">
@@ -505,11 +505,6 @@
                             <td>{{ $reservation->status }}</td>
                             <td>
                               <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
-                              <form action="{{ route('reservation.destroy', $reservation->id) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Delete</button>
-                              </form>
                             </td>
                           </tr>
                         @endforeach
@@ -559,8 +554,8 @@
                       </tbody>
                     </table>
                   </div>
-
                 </div>
+                <a href="{{ route('reservation.dashboard') }}" class="text-sm">See more data →</a>
               </div>
             </div>
           </div>

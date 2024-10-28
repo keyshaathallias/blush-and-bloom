@@ -55,22 +55,33 @@
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($pendingReservations as $reservation)
+                      @if ($pendingReservations->isEmpty())
                         <tr>
-                          <td>{{ $loop->iteration }}.</td>
-                          <td>{{ $reservation->first_name }}</td>
-                          <td>{{ $reservation->last_name }}</td>
-                          <td>{{ $reservation->phone_number }}</td>
-                          <td>{{ $reservation->email }}</td>
-                          <td>{{ $reservation->date }}</td>
-                          <td>{{ $reservation->treatment->name }}</td>
-                          <td>{{ $reservation->message }}</td>
-                          <td>{{ $reservation->status }}</td>
-                          <td>
-                            <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
+                          <td colspan="10" class="text-center">
+                            <div class="flex flex-col items-center justify-center text-center">
+                              <p>No Pending Reservations Available Yet</p>
+                            </div>
                           </td>
                         </tr>
-                      @endforeach
+                      @else
+                        @foreach ($pendingReservations as $reservation)
+                          <tr>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>{{ $reservation->first_name }}</td>
+                            <td>{{ $reservation->last_name }}</td>
+                            <td>{{ $reservation->phone_number }}</td>
+                            <td>{{ $reservation->email }}</td>
+                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->treatment->name }}</td>
+                            <td>{{ $reservation->message }}</td>
+                            <td>{{ $reservation->status }}</td>
+                            <td>
+                              <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
+                            </td>
+                          </tr>
+                        @endforeach
+                      @endif
+
                     </tbody>
                   </table>
                 </div>
@@ -93,27 +104,33 @@
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($confirmedReservations as $reservation)
+                      @if ($confirmedReservations->isEmpty())
                         <tr>
-                          <td>{{ $loop->iteration }}.</td>
-                          <td>{{ $reservation->first_name }}</td>
-                          <td>{{ $reservation->last_name }}</td>
-                          <td>{{ $reservation->phone_number }}</td>
-                          <td>{{ $reservation->email }}</td>
-                          <td>{{ $reservation->date }}</td>
-                          <td>{{ $reservation->treatment->name }}</td>
-                          <td>{{ $reservation->message }}</td>
-                          <td>{{ $reservation->status }}</td>
-                          <td>
-                            <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
-                            <form action="{{ route('reservation.destroy', $reservation->id) }}" method="post">
-                              @csrf
-                              @method('DELETE')
-                              <button type="submit">Delete</button>
-                            </form>
+                          <td colspan="10" class="text-center">
+                            <div class="flex flex-col items-center justify-center text-center">
+                              <p>No Confirmed Reservations Available Yet</p>
+                            </div>
                           </td>
                         </tr>
-                      @endforeach
+                      @else
+                        @foreach ($confirmedReservations as $reservation)
+                          <tr>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>{{ $reservation->first_name }}</td>
+                            <td>{{ $reservation->last_name }}</td>
+                            <td>{{ $reservation->phone_number }}</td>
+                            <td>{{ $reservation->email }}</td>
+                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->treatment->name }}</td>
+                            <td>{{ $reservation->message }}</td>
+                            <td>{{ $reservation->status }}</td>
+                            <td>
+                              <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
+                            </td>
+                          </tr>
+                        @endforeach
+                      @endif
+
                     </tbody>
                   </table>
                 </div>
@@ -136,27 +153,38 @@
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($completedReservations as $reservation)
+                      @if ($completedReservations->isEmpty())
                         <tr>
-                          <td>{{ $loop->iteration }}.</td>
-                          <td>{{ $reservation->first_name }}</td>
-                          <td>{{ $reservation->last_name }}</td>
-                          <td>{{ $reservation->phone_number }}</td>
-                          <td>{{ $reservation->email }}</td>
-                          <td>{{ $reservation->date }}</td>
-                          <td>{{ $reservation->treatment->name }}</td>
-                          <td>{{ $reservation->message }}</td>
-                          <td>{{ $reservation->status }}</td>
-                          <td>
-                            <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
-                            <form action="{{ route('reservation.destroy', $reservation->id) }}" method="post">
-                              @csrf
-                              @method('DELETE')
-                              <button type="submit">Delete</button>
-                            </form>
+                          <td colspan="10" class="text-center">
+                            <div class="flex flex-col items-center justify-center text-center">
+                              <p>No Completed Reservations Available Yet</p>
+                            </div>
                           </td>
                         </tr>
-                      @endforeach
+                      @else
+                        @foreach ($completedReservations as $reservation)
+                          <tr>
+                            <td>{{ $loop->iteration }}.</td>
+                            <td>{{ $reservation->first_name }}</td>
+                            <td>{{ $reservation->last_name }}</td>
+                            <td>{{ $reservation->phone_number }}</td>
+                            <td>{{ $reservation->email }}</td>
+                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->treatment->name }}</td>
+                            <td>{{ $reservation->message }}</td>
+                            <td>{{ $reservation->status }}</td>
+                            <td>
+                              <a href="{{ route('reservation.edit', $reservation->id) }}">Edit</a>
+                              <form action="{{ route('reservation.destroy', $reservation->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                              </form>
+                            </td>
+                          </tr>
+                        @endforeach
+                      @endif
+
                     </tbody>
                   </table>
                 </div>
