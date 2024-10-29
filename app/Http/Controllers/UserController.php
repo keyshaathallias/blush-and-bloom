@@ -29,7 +29,6 @@ class UserController extends Controller
             'name'     => 'required',
             'email'    => 'required',
             'password' => 'required|min:6',
-            'roles'    => 'required',
         ]);
 
         $credentials['password'] = Hash::make($request['password']);
@@ -37,7 +36,6 @@ class UserController extends Controller
         User::create([
             'name'     => $credentials['name'],
             'email'    => $credentials['email'],
-            'roles'    => $credentials['roles'],
             'password' => Hash::make($request['password']),
         ]);
 
@@ -55,7 +53,6 @@ class UserController extends Controller
         $credentials = $request->validate([
             'name'  => 'required',
             'email' => 'required',
-            'roles' => 'required',
         ]);
 
         $user->update($credentials);

@@ -52,7 +52,7 @@
                           <div class="col-md-8 form-group">
                             <input type="password" id="password" class="form-control" name="password"
                               placeholder="Must be at least 6 characters.">
-                            <i class="bi bi-eye-fill absolute top-[44%] right-10 transform cursor-pointer text-secondary"
+                            <i class="bi bi-eye-fill absolute top-[54%] right-10 transform cursor-pointer text-secondary"
                               id="togglePassword"></i>
                             @error('password')
                               <small>{{ $message }}</small>
