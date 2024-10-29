@@ -82,6 +82,13 @@
               <span>Reservation</span>
             </a>
           </li>
+          
+          <li class="sidebar-item {{ Request::is('customer-dashboard') ? 'active' : '' }}">
+            <a href="{{ route('customer.dashboard') }}" class='sidebar-link'>
+              <i class="bi bi-envelope-open-heart-fill"></i>
+              <span>Customer</span>
+            </a>
+          </li>
   
           <li class="sidebar-item {{ Request::is('account-dashboard', 'create-account', 'edit-account/*') ? 'active' : '' }}">
             <a href="{{ route('account.index') }}" class='sidebar-link'>

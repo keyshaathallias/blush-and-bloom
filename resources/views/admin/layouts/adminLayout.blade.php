@@ -24,9 +24,6 @@
   <div id="app">
     @include('admin.partials.sidebar')
     <div id="main">
-      <div class="content-header">
-        @include('admin.partials.navbar')
-      </div>
       @yield('content')
     </div>
     @include('admin.partials.footer')

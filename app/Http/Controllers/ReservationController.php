@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmailPromotion;
 use App\Mail\EmailReservation;
 use App\Models\Reservation;
 use App\Models\Treatment;
@@ -79,6 +80,24 @@ class ReservationController extends Controller
         }
 
         return redirect()->route('reservation.dashboard')->with('success', 'Reservation Status Has Been Updated!');
+    }
+
+    public function customerList() {
+        $customers = Reservation::select('first_name', 'last_name', 'email')
+                                ->distinct()
+                                ->get();
+    
+        return view('admin.pages.customer', compact('customers'));
+    }
+
+    public function sendPromotion() {
+        $customers = Reservation::select('email')->distinct()->get();
+        
+        foreach ($customers as $customer) {
+            Mail::to($customer->email)->send(new EmailPromotion());
+        }
+    
+        return redirect()->back()->with('success', 'Promotional emails sent successfully to all customers!');
     }
 
     public function destroy($id): RedirectResponse {
