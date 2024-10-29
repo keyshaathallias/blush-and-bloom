@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmailReservation;
 use App\Models\Reservation;
 use App\Models\Treatment;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends Controller
 {
@@ -32,9 +34,12 @@ class ReservationController extends Controller
             'message'      => 'nullable',
         ]);
 
-        Reservation::create($credentials);
+        $reservation = Reservation::create($credentials);
+        $statusMessage = 'Thank you for your reservation. Your status is currently pending.';
+        $greetingMessage = 'Please wait for confirmation.';
+        Mail::to($reservation->email)->send(new EmailReservation($reservation, $statusMessage, $greetingMessage));
 
-        return redirect()->back()->with('success', 'Reservation Sent Successfully!');
+        return redirect()->back()->with('success', 'Please check your email for updates!');
     }
 
     public function dashboard() {
@@ -51,13 +56,27 @@ class ReservationController extends Controller
     }
 
     public function update(Request $request, string $id) {
-        $reservation = Reservation::where('id', $id);
+        $reservation = Reservation::findOrFail($id);
         
         $credentials = $request->validate([
             'status' => 'required',
         ]);
 
-        $reservation->update($credentials);
+        $status = $credentials['status'];
+        $reservation->update(['status' => $status]);
+
+        $statusMessage = '';
+        if ($status == 'confirmed') {
+            $statusMessage   = 'Your reservation has been confirmed.';
+            $greetingMessage = 'We are looking forward to seeing you!';
+        } elseif ($status == 'completed') {
+            $statusMessage   = 'Your reservation has been completed.';
+            $greetingMessage = 'Thank you for choosing our service!';
+        }
+
+        if ($statusMessage) {
+            Mail::to($reservation->email)->send(new EmailReservation($reservation, $statusMessage, $greetingMessage));
+        }
 
         return redirect()->route('reservation.dashboard')->with('success', 'Reservation Status Has Been Updated!');
     }

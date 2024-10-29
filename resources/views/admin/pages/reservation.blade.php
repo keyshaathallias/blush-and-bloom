@@ -23,7 +23,7 @@
             </div>
             <div class="card-body card-content">
               <!-- Tabs -->
-              <ul class="nav nav-underline mb-4">
+              <ul class="mb-4 nav nav-underline">
                 <li class="nav-item">
                   <a class="nav-link" href="#" data-tab="pending">Pending Reservation</a>
                 </li>
@@ -71,7 +71,7 @@
                             <td>{{ $reservation->last_name }}</td>
                             <td>{{ $reservation->phone_number }}</td>
                             <td>{{ $reservation->email }}</td>
-                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->date->format('j F Y') }}</td>
                             <td>{{ $reservation->treatment->name }}</td>
                             <td>{{ $reservation->message }}</td>
                             <td>{{ $reservation->status }}</td>
@@ -120,7 +120,7 @@
                             <td>{{ $reservation->last_name }}</td>
                             <td>{{ $reservation->phone_number }}</td>
                             <td>{{ $reservation->email }}</td>
-                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->date->format('j F Y') }}</td>
                             <td>{{ $reservation->treatment->name }}</td>
                             <td>{{ $reservation->message }}</td>
                             <td>{{ $reservation->status }}</td>
@@ -169,7 +169,7 @@
                             <td>{{ $reservation->last_name }}</td>
                             <td>{{ $reservation->phone_number }}</td>
                             <td>{{ $reservation->email }}</td>
-                            <td>{{ $reservation->date }}</td>
+                            <td>{{ $reservation->date->format('j F Y') }}</td>
                             <td>{{ $reservation->treatment->name }}</td>
                             <td>{{ $reservation->message }}</td>
                             <td>{{ $reservation->status }}</td>

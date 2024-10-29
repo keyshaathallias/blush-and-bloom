@@ -10,6 +10,10 @@ class Reservation extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+    
+    protected $casts = [
+        'date' => 'date',
+    ];
 
     public function treatment() {
         return $this->belongsTo(Treatment::class);
