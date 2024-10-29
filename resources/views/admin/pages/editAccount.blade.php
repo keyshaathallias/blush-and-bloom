@@ -49,19 +49,6 @@
                               <small>{{ $message }}</small>
                             @enderror
                           </div>
-                          <div class="col-md-4">
-                            <label for="roles">Role</label>
-                          </div>
-                          <div class="col-md-8 form-group">
-                            <select id="roles" class="form-select" aria-label="Default select example" name="roles">
-                              <option value="administrator" {{ $user->roles == 'administrator' ? 'selected' : '' }}>
-                                Administrator</option>
-                              <option value="user" {{ $user->roles == 'user' ? 'selected' : '' }}>User</option>
-                            </select>
-                            @error('roles')
-                              <small>{{ $message }}</small>
-                            @enderror
-                          </div>
                           <div class="col-sm-12 d-flex justify-content-end">
                             <button type="submit" class="mb-1 btn btn-primary me-1">Edit</button>
                             <button type="reset" class="mb-1 btn btn-light-secondary me-1">Reset</button>

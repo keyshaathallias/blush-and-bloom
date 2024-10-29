@@ -56,6 +56,6 @@ class FrontendController extends Controller
 
         Reservation::create($credentials);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Reservation Sent Successfully!');
     }
 }

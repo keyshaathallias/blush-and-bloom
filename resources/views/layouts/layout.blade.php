@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@1,400..900&display=swap"
     rel="stylesheet">
 
+
 </head>
 
 <body class="bg-light font-lato">
@@ -24,6 +25,7 @@
     @yield('content')
   </div>
   @include('partials.footer')
+  @include('sweetalert::alert')
 
   <script>
     const hamburger = document.getElementById('hamburger');

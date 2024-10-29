@@ -56,7 +56,8 @@
                         <tr>
                           <td>{{ $loop->iteration }}.</td>
                           <td>
-                            <img src="{{ asset('storage/img/' . $product->image) }}" alt="{{ $product->name }}" width="250">
+                            <img src="{{ asset('storage/img/' . $product->image) }}" alt="{{ $product->name }}"
+                              width="250">
                           </td>
                           <td>{{ $product->name }}</td>
                           <td>{{ 'Rp ' . number_format($product->price, 2, ',', '.') }}</td>
@@ -65,9 +66,9 @@
                           <td>
                             <a href="{{ route('product.edit', $product->slug) }}">Edit</a>
                             <form action="{{ route('product.destroy', $product->slug) }}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Delete</button>
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit">Delete</button>
                             </form>
                           </td>
                         </tr>

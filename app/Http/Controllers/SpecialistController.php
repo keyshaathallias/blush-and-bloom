@@ -12,6 +12,11 @@ class SpecialistController extends Controller
 {
     public function index() {
         $specialists = Specialist::all();
+
+        $title = 'Delete Specialist';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         return view('admin.pages.specialist', compact('specialists'));
     }
 
@@ -38,7 +43,7 @@ class SpecialistController extends Controller
             'slug'         => $credentials['slug'],
         ]);
 
-        return redirect()->route('specialist.index');
+        return redirect()->route('specialist.index')->with('success', 'New Specialist Unlocked!');
     }
 
     public function edit(string $slug) {
@@ -77,7 +82,7 @@ class SpecialistController extends Controller
             ]);
         }
 
-        return redirect()->route('specialist.index');
+        return redirect()->route('specialist.index')->with('success', 'Specialist Updated!');
     }
 
     public function destroy($slug): RedirectResponse {
@@ -85,6 +90,6 @@ class SpecialistController extends Controller
         Storage::delete('public/img/' . $specialist->image);
         $specialist->delete();
 
-        return redirect()->route('specialist.index');
+        return redirect()->back()->with('success', 'Specialist Deleted.');
     }
 }

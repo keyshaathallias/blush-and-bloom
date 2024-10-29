@@ -14,6 +14,11 @@ class ProductController extends Controller
     public function index() {
         $products   = Product::with('categories')->get();
         $categories = Categories::all();
+
+        $title = 'Delete Product';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         return view('admin.pages.product', compact('products', 'categories'));
     }
 
@@ -45,7 +50,7 @@ class ProductController extends Controller
             'slug'          => $credentials['slug'],
         ]);
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('success', 'New Product Unlocked!');
     }
 
     public function show(string $slug) {
@@ -95,7 +100,7 @@ class ProductController extends Controller
             ]);
         }
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('success', 'Product Updated!');
     }
 
     public function destroy($slug): RedirectResponse {
@@ -103,7 +108,7 @@ class ProductController extends Controller
         Storage::delete('public/img/' . $product->image);
         $product->delete();
 
-        return redirect()->route('product.index');
+        return redirect()->back()->with('success', 'Product Deleted.');
     }
 
 }

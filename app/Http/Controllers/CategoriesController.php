@@ -11,6 +11,11 @@ class CategoriesController extends Controller
 {
     public function index() {
         $categories = Categories::all();
+        
+        $title = 'Delete Category';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         return view('admin.pages.categories', compact('categories'));
     }
 
@@ -30,7 +35,7 @@ class CategoriesController extends Controller
             'slug' => $credentials['slug'],
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->with('success', 'New Category Unlocked!');
     }
 
     public function show(string $id)
@@ -57,13 +62,13 @@ class CategoriesController extends Controller
             'slug'     => $credentials['slug'],
         ]);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->with('success', 'Category Updated!');
     }
 
     public function destroy($slug): RedirectResponse {
         $category = Categories::where('slug', $slug)->firstOrFail();
         $category->delete();
 
-        return redirect()->route('categories.index');
+        return redirect()->back()->with('success', 'Category Deleted.');
     }
 }

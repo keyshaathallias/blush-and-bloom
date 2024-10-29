@@ -12,6 +12,11 @@ class UserController extends Controller
 {
     public function index() {
         $users = User::all();
+        
+        $title = 'Delete Account';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         return view('admin.pages.account', compact('users'));
     }
 
@@ -36,7 +41,7 @@ class UserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
-        return redirect()->route('account.index');
+        return redirect()->route('account.index')->with('success', 'New Account Added!');
     }
 
     public function edit(string $id) {
@@ -55,13 +60,13 @@ class UserController extends Controller
 
         $user->update($credentials);
 
-        return redirect()->route('account.index');
+        return redirect()->route('account.index')->with('success', 'Account Successfully Updated!');
     }
 
     public function destroy($id): RedirectResponse {
         $user = User::where('id', $id)->firstOrFail();
         $user->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Account Deleted.');
     }
 }

@@ -92,6 +92,3 @@ Route::middleware('auth')->group(function() {
 // Route::get('/cart', function () {
 //     return view('pages.cart');
 // });
-Route::get('/404', function () {
-    return view('pages.404');
-});

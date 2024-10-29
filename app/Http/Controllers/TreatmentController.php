@@ -12,6 +12,11 @@ class TreatmentController extends Controller
 {
     public function index() {
         $treatments = Treatment::all();
+        
+        $title = 'Delete Treatment';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
         return view('admin.pages.treatment', compact('treatments'));
     }
 
@@ -38,7 +43,7 @@ class TreatmentController extends Controller
             'slug'         => $credentials['slug'],
         ]);
 
-        return redirect()->route('treatment.index');
+        return redirect()->route('treatment.index')->with('success', 'New Treatment Unlocked!');
     }
 
     public function edit(string $slug) {
@@ -77,7 +82,7 @@ class TreatmentController extends Controller
             ]);
         }
 
-        return redirect()->route('treatment.index');
+        return redirect()->route('treatment.index')->with('success', 'Treatment Updated!');
     }
 
     public function destroy($slug): RedirectResponse {
@@ -85,6 +90,6 @@ class TreatmentController extends Controller
         Storage::delete('public/img/' . $treatment->image);
         $treatment->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Treatment Deleted.');
     }
 }

@@ -12,6 +12,11 @@ class ReservationController extends Controller
     public function index() {
         $reservation = Reservation::with('treatment')->get();
         $treatments  = Treatment::all();
+        
+        $title = 'Delete Reservation';
+        $text  = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
+
 
         return view('pages.reservation', compact('reservation', 'treatments'));
     }
@@ -29,7 +34,7 @@ class ReservationController extends Controller
 
         Reservation::create($credentials);
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Reservation Sent Successfully!');
     }
 
     public function dashboard() {
@@ -54,12 +59,12 @@ class ReservationController extends Controller
 
         $reservation->update($credentials);
 
-        return redirect()->route('reservation.dashboard');
+        return redirect()->route('reservation.dashboard')->with('success', 'Reservation Status Has Been Updated!');
     }
 
     public function destroy($id): RedirectResponse {
         $reservation = Reservation::where('id', $id);
         $reservation->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Reservation Deleted.');
     }
 }
