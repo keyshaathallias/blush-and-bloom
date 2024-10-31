@@ -102,22 +102,18 @@ class ReservationController extends Controller
     }
 
     public function sendSelectedEmails(Request $request) {
-        $selectedCustomerIds = $request->input('selected_customers', []);
+        $selectedCustomerEmails = $request->input('selected_customers', []);
         
-        if (empty($selectedCustomerIds)) {
+        if (empty($selectedCustomerEmails)) {
             return redirect()->back()->with('error', 'No customers selected!');
         }
     
-        $customers = Reservation::whereIn('id', $selectedCustomerIds)->select('email')->distinct()->get();
-        return $selectedCustomerIds;
-    
-        foreach ($customers as $customer) {
-            Mail::to($customer->email)->send(new EmailPromotion());
+        foreach ($selectedCustomerEmails as $customer) {
+            Mail::to($customer)->send(new EmailPromotion());
         }
 
         return redirect()->back()->with('success', 'Promotional emails sent successfully to selected customers!');
     }
-    
 
     public function destroy($id): RedirectResponse {
         $reservation = Reservation::where('id', $id);

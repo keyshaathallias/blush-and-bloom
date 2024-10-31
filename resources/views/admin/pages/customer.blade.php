@@ -47,7 +47,7 @@
                           <td>{{ $customer->first_name }} {{ $customer->last_name }}</td>
                           <td>{{ $customer->email }}</td>
                           <td>
-                            <input type="checkbox" name="selected_customers[]" value="{{ $customer->id }}">
+                            <input type="checkbox" name="selected_customers[]" value="{{ $customer->email }}">
                           </td>
                         </tr>
                       @endforeach
