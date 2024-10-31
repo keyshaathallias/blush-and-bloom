@@ -18,45 +18,45 @@
           <div class="card">
             <div class="flex flex-wrap card-header">
               <div class="order-first col-12 col-md-6 order-md-1">
-                <h3>Customer</h3>
+                <h3>Customer List</h3>
               </div>
-              <div class="order-last col-12 col-md-6 order-md-2">
+              <div class="order-last col-12 col-md-6 order-md-1">
                 <form action="{{ route('customer.sendPromotion') }}" method="POST" class="float-start float-lg-end">
                   @csrf
-                  <button type="submit" class="float-right m-auto btn btn-primary">Share All</button>
+                  <button type="submit" class="float-right m-auto btn btn-primary">Share Email to All</button>
                 </form>
               </div>
             </div>
             <div class="card-body card-content">
               <div class="table-responsive">
-                <table class="table mb-0 table-striped table-bordered table-hover">
-                  <thead class="table-responsive">
-                    <tr>
-                      <th>No.</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-responsive">
-                    @if ($customers->isEmpty())
+                <form action="{{ route('customer.sendSelectedEmails') }}" method="POST">
+                  @csrf
+                  <table class="table mb-0 table-striped table-bordered table-hover">
+                    <thead>
                       <tr>
-                        <td colspan="3" class="text-center">
-                          <div class="flex flex-col items-center justify-center text-center">
-                            <p>No Customer Available Yet</p>
-                          </div>
-                        </td>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Select</th>
                       </tr>
-                    @else
+                    </thead>
+                    <tbody>
                       @foreach ($customers as $customer)
                         <tr>
                           <td>{{ $loop->iteration }}.</td>
                           <td>{{ $customer->first_name }} {{ $customer->last_name }}</td>
                           <td>{{ $customer->email }}</td>
+                          <td>
+                            <input type="checkbox" name="selected_customers[]" value="{{ $customer->id }}">
+                          </td>
                         </tr>
                       @endforeach
-                    @endif
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                  <div class="flex justify-end mt-3">
+                    <button type="submit" class="btn btn-primary">Send to Selected Emails</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

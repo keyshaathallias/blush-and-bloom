@@ -86,7 +86,7 @@
           <li class="sidebar-item {{ Request::is('customer-dashboard') ? 'active' : '' }}">
             <a href="{{ route('customer.dashboard') }}" class='sidebar-link'>
               <i class="bi bi-envelope-open-heart-fill"></i>
-              <span>Customer</span>
+              <span>Send Email</span>
             </a>
           </li>
   

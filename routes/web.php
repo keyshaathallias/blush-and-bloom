@@ -79,6 +79,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/edit-reservation/{slug}', [ReservationController::class, 'edit'])->name('reservation.edit');
     Route::put('/edit-reservation/{slug}', [ReservationController::class, 'update'])->name('reservation.update');
     Route::get('/customer-dashboard', [ReservationController::class, 'customerList'])->name('customer.dashboard');
+    Route::post('/customer-dashboard/send-selected-emails', [ReservationController::class, 'sendSelectedEmails'])->name('customer.sendSelectedEmails');
     Route::post('/customer-dashboard/send-promotion', [ReservationController::class, 'sendPromotion'])->name('customer.sendPromotion');
     Route::delete('/delete-reservation/{slug}', [ReservationController::class, 'destroy'])->name('reservation.destroy');
 
