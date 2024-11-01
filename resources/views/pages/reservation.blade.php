@@ -17,43 +17,49 @@
       @csrf
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="text" name="first_name"
-            id="first_name" placeholder="First Name*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="text" name="first_name" id="first_name" placeholder="First Name*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="text" name="last_name"
-            id="last_name" placeholder="Last Name*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="text" name="last_name" id="last_name" placeholder="Last Name*" required>
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="number" name="phone_number"
-            id="phone_number" placeholder="Phone Number*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="number" name="phone_number" id="phone_number" placeholder="Phone Number*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="email" name="email"
-            id="email" placeholder="Email*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="email" name="email" id="email" placeholder="Email*" required>
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="date" name="date"
-            id="date" placeholder="Date*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="date" name="date" id="date" placeholder="Date*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
           <select name="treatment_id" id="treatment_id" name="treatment_id"
-            class="w-full px-6 py-4 bg-white border border-cream rounded-xl">
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">
             <option selected>Choose Treatment*</option>
             @foreach ($treatments as $treatment)
-                <option value="{{ $treatment->id }}">{{ $treatment->name }}</option>
+              <option value="{{ $treatment->id }}">{{ $treatment->name }}</option>
             @endforeach
           </select>
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[1010px] lg:w-[803px] md:w-[702px] w-[300px] text-sm lg:text-base">
-          <textarea class="w-full px-6 py-4 bg-white border border-cream rounded-xl" name="message" id="message"
-            cols="30" rows="10" placeholder="Message"></textarea>
+          <textarea
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
         </div>
       </div>
       <button type="submit"
@@ -83,10 +89,10 @@
         </div>
 
         <a href=""
-          class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4">
+          class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-2xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4 hover:bg-secondary hover:text-gold group focus:ring-primary focus:border-primary focus:ring-1 focus:outline-none">
           <span class="font-semibold text-[14px] lg:text-base">Chat with Us</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#493628" class="bi bi-whatsapp"
-            viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 group-hover:fill-gold" fill="#493628"
+            class="bi bi-whatsapp" viewBox="0 0 16 16">
             <path
               d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
           </svg>

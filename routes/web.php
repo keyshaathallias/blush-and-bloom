@@ -91,7 +91,3 @@ Route::middleware('auth')->group(function() {
     Route::put('/edit-account/{id}', [UserController::class, 'update'])->name('account.update');
     Route::delete('/delete-account/{id}', [UserController::class, 'destroy'])->name('account.destroy');
 });
-
-// Route::get('/cart', function () {
-//     return view('pages.cart');
-// });

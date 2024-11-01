@@ -63,9 +63,10 @@
 
   </nav>
 
-  <div class="flex flex-col justify-center pt-10 lg:flex-row lg:pt-32">
+  <div class="flex flex-col justify-center mt-20 lg:flex-row md:mt-30">
     <div class="container flex justify-center">
-      <form action="{{ route('login.login') }}" method="POST" class="lg:w-[550px] w-[350px] bg-white p-10">
+      <form action="{{ route('login.login') }}" method="POST"
+        class="lg:w-[803px] md:w-[702px] w-[300px] bg-white lg:p-10 md:p-7 p-5">
         @csrf
         <div class="heading">
           <h1 class="text-2xl font-semibold lg:text-3xl text-secondary">Sign In</h1>
@@ -73,29 +74,23 @@
         </div>
         <div class="relative pt-5">
           <input type="email" name="email" id="email"
-            class="w-full px-6 py-2 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none" placeholder="Input your email">
+            class="w-full px-6 py-2 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            placeholder="Input your email">
         </div>
 
         <div class="relative pt-2">
           <input type="password" name="password" id="password"
-            class="w-full px-6 py-2 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none" placeholder="Input your password">
+            class="w-full px-6 py-2 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            placeholder="Input your password">
           <i class="bi bi-eye-fill absolute top-[33%] right-3 transform cursor-pointer text-secondary"
             id="togglePassword"></i>
         </div>
 
         <div class="flex flex-col w-full gap-3 mx-auto mt-5 mb-3 text-center">
           <button type="submit"
-            class="text-base lg:text-lg px-6 py-2 lg:rounded-2xl rounded-[10px] text-center font-medium border-secondary border-2 text-secondary shadow-xl bg-white hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold active:border-[#e4a935] focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">Sign In</button>
+            class="text-base lg:text-lg px-6 py-2 lg:rounded-2xl rounded-[10px] text-center font-medium border-secondary border-2 text-secondary shadow-xl bg-white hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold active:border-[#e4a935] focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">Sign
+            In</button>
         </div>
-
-        {{-- <div class="justify-between lg:flex">
-              <a href="{{ route('register') }}" class="text-xs text-left text-gray-500">Don't have an account? <span
-                  class="transition duration-200 ease-in-out transform text-secondary hover:text-primary">Create
-                  Account</span></a>
-              <br>
-              <a href="{{ route('forgot.password') }}" class="text-xs text-left text-gray-500">Forgot Password?</a>
-            </div> --}}
-
       </form>
     </div>
   </div>

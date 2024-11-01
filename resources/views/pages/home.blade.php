@@ -18,10 +18,10 @@
 
       <div class="flex flex-wrap items-center justify-center gap-5 mt-5 md:justify-start">
         <a href="{{ route('product.show') }}"
-          class="text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-gold border-2 text-gold shadow-xl shadow-[#583B34] bg-transparent hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold">
+          class="text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-gold border-2 text-gold shadow-xl shadow-[#583B34] bg-transparent hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold  focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">
           Explore <span class="font-bold font-playfair-display">Products</span></a>
         <a href="{{ route('treatment.show') }}"
-          class="text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-gold border-2 text-gold shadow-xl shadow-[#583B34] bg-transparent hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold">
+          class="text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-gold border-2 text-gold shadow-xl shadow-[#583B34] bg-transparent hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">
           View <span class="font-bold font-playfair-display">Treatments</span></a>
       </div>
 
@@ -136,7 +136,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-2.png" alt="Person 2">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
                 viewBox="0 0 16 16">
@@ -147,7 +147,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Grace Walls</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -156,7 +156,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-3.png" alt="Person 3">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F" class="bi bi-star-fill"
                 viewBox="0 0 16 16">
@@ -167,7 +167,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Keysha Athallia</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -180,7 +180,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-4.png" alt="Person 4">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -191,7 +191,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Mimi</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -220,7 +220,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-2.png" alt="Person 2">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -231,7 +231,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Grace Walls</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -268,7 +268,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-2.png" alt="Person 2">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -279,7 +279,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Grace Walls</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -288,7 +288,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-3.png" alt="Person 3">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -299,7 +299,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Keysha Athallia</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -314,7 +314,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-4.png" alt="Person 4">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -325,7 +325,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Mimi</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -354,7 +354,7 @@
         <div
           class="bg-white w-[300px] md:w-[400px] lg:w-[480px] rounded-lg py-5 px-6 flex gap-6 justify-center shadow-lg">
           <div class="flex flex-col gap-2">
-            <img src="/asset/testimonial/person-1.png" alt="Person 1">
+            <img src="/asset/testimonial/person-2.png" alt="Person 2">
             <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-light">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FABC3F"
                 class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -365,7 +365,7 @@
             </div>
           </div>
           <div class="text-gray">
-            <h3 class="text-xl font-semibold lg:text-2xl">Iswa Salsabila</h3>
+            <h3 class="text-xl font-semibold lg:text-2xl">Grace Walls</h3>
             <p class="text-base lg:text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, officia
               dolor impedit
               necessitatibus recusandae est.</p>
@@ -423,32 +423,37 @@
       @csrf
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="text" name="first_name"
-            id="first_name" placeholder="First Name*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="text" name="first_name" id="first_name" placeholder="First Name*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="text" name="last_name"
-            id="last_name" placeholder="Last Name*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="text" name="last_name" id="last_name" placeholder="Last Name*" required>
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="number" name="phone_number"
-            id="phone_number" placeholder="Phone Number*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="number" name="phone_number" id="phone_number" placeholder="Phone Number*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="email" name="email"
-            id="email" placeholder="Email*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="email" name="email" id="email" placeholder="Email*" required>
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
-          <input class="w-full px-6 py-4 bg-white border border-cream rounded-xl" type="date" name="date"
-            id="date" placeholder="Date*" required>
+          <input
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            type="date" name="date" id="date" placeholder="Date*" required>
         </div>
         <div class="md:pt-2 xl:w-[500px] lg:w-[400px] md:w-[350px] w-[300px] pb-2 lg:pb-0 text-sm lg:text-base">
           <select name="treatment_id" id="treatment_id" name="treatment_id"
-            class="w-full px-6 py-4 bg-white border border-cream rounded-xl">
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">
             <option selected>Choose Treatment*</option>
             @foreach ($treatments as $treatment)
               <option value="{{ $treatment->id }}">{{ $treatment->name }}</option>
@@ -458,12 +463,13 @@
       </div>
       <div class="flex flex-wrap justify-center gap-2 xl:gap-4 lg:gap-3">
         <div class="pt-2 xl:w-[1010px] lg:w-[803px] md:w-[702px] w-[300px] text-sm lg:text-base">
-          <textarea class="w-full px-6 py-4 bg-white border border-cream rounded-xl" name="message" id="message"
-            cols="30" rows="10" placeholder="Message"></textarea>
+          <textarea
+            class="w-full px-6 py-4 bg-white border border-cream rounded-xl focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none"
+            name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
         </div>
       </div>
       <button type="submit"
-        class="mt-7 text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-secondary border-2 text-secondary shadow-xl bg-white hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold active:border-[#e4a935]">Make
+        class="mt-7 text-base lg:text-lg px-6 py-3 lg:rounded-2xl rounded-[10px] text-center font-medium border-secondary border-2 text-secondary shadow-xl bg-white hover:bg-gradient-to-br hover:from-[#FABC3F] hover:via-[#FFCF6D] hover:to-[#EEAB25] hover:text-secondary transition duration-200 ease-in-out hover:border-gold active:border-[#e4a935] focus:ring-yellow-500 focus:border-yellow-500 focus:ring-1 focus:outline-none">Make
         Reservation
       </button>
 
@@ -489,7 +495,7 @@
         </div>
 
         <a href=""
-          class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-2xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4 hover:bg-secondary hover:text-gold group active:border-gold">
+          class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-2xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4 hover:bg-secondary hover:text-gold group focus:ring-primary focus:border-primary focus:ring-1 focus:outline-none">
           <span class="font-semibold text-[14px] lg:text-base">Chat with Us</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5 group-hover:fill-gold" fill="#493628"
             class="bi bi-whatsapp" viewBox="0 0 16 16">

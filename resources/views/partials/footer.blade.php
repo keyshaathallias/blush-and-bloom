@@ -10,7 +10,8 @@
       </div>
 
       {{-- Links --}}
-      <div class="flex flex-wrap justify-between text-white gap-y-6 md:gap-x-20 md:gap-y-8 md:flex-row md:justify-normal">
+      <div
+        class="flex flex-wrap justify-between text-white gap-y-6 md:gap-x-20 md:gap-y-8 md:flex-row md:justify-normal">
 
         <div class="flex flex-col gap-4 md:gap-5">
           <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Quick Links</h4>
@@ -23,20 +24,10 @@
           </div>
         </div>
         <div class="flex flex-col gap-4 md:gap-5">
-          <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Product <br> Categories</h4>
-          <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">All</a>
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Face</a>
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Body</a>
-          </div>
-        </div>
-        <div class="flex flex-col gap-4 md:gap-5">
           <h4 class="text-lg font-bold md:text-xl lg:text-2xl">Treatments</h4>
           <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Whitening Program</a>
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Facial Treatment</a>
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Acne Free Program</a>
-            <a href="/" class="transition duration-200 ease-in-out hover:text-gold">Body Care Spa </a>
+            <a href="{{ route('treatment.show') }}" class="transition duration-200 ease-in-out hover:text-gold">Acne Free Program</a>
+            <a href="{{ route('treatment.show') }}" class="transition duration-200 ease-in-out hover:text-gold">Body Care Spa</a>
           </div>
         </div>
         <div class="flex flex-col gap-4 md:gap-5">
