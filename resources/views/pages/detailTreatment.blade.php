@@ -5,7 +5,8 @@
   <div class="container py-10 mx-auto md:py-12 px-7 lg:px-10">
     <h1 class="lg:text-[32px] text-2xl font-bold text-center text-secondary lg:mb-9 mb-5">{{ $treatment->name }}</h1>
     <div class="flex flex-col items-center justify-center gap-5 lg:items-start md:gap-7 lg:flex-row">
-      <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}" class="w-full md:w-[350px] rounded-md">
+      <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}"
+        class="w-full md:w-[350px] rounded-md">
       <p class="text-lg text-gray">
         {{ $treatment->description }}
       </p>
@@ -29,7 +30,7 @@
             maiores ipsam exercitationem sapiente.</p>
         </div>
 
-        <a href=""
+        <a href="https://wa.me/6285156536864" target="_blank"
           class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4">
           <span class="font-semibold text-[14px] lg:text-base">Chat with Us</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#493628" class="bi bi-whatsapp"

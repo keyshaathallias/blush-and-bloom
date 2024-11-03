@@ -88,7 +88,7 @@
             maiores ipsam exercitationem sapiente.</p>
         </div>
 
-        <a href=""
+        <a href="https://wa.me/6285156536864" target="_blank"
           class="flex items-center justify-center px-6 py-3 mt-5 text-center transition-all duration-300 ease-out bg-transparent border-2 shadow-sm w-fit rounded-2xl border-secondary text-secondary gap-x-2 hover:gap-x-4 hover:pr-4 hover:bg-secondary hover:text-gold group focus:ring-primary focus:border-primary focus:ring-1 focus:outline-none">
           <span class="font-semibold text-[14px] lg:text-base">Chat with Us</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5 group-hover:fill-gold" fill="#493628"
