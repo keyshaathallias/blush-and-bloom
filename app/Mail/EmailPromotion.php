@@ -13,10 +13,20 @@ class EmailPromotion extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $customer;
+
+    public function __construct($customer) {
+        $this->customer = $customer;
+    }
+
     public function build()
     {
-        return $this->subject('Exclusive Promotion Just for You!')
-                    ->view('emails.promotion');
+        return $this->subject('Exclusive Promotion for You!')
+                    ->view('emails.promotion')
+                    ->with([
+                        'firstName' => $this->customer->first_name,
+                        'lastName'  => $this->customer->last_name,
+                    ]);
     }
 
 }
