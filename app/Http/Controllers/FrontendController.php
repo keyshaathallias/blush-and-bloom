@@ -56,6 +56,6 @@ class FrontendController extends Controller
 
         Reservation::create($credentials);
 
-        return redirect()->back()->with('success', 'Reservation Sent Successfully!');
+        return redirect()->back()->with('success', 'Please check your email for updates!');
     }
 }
