@@ -7,9 +7,9 @@
     <div class="flex flex-col items-center justify-center gap-5 lg:items-start md:gap-7 lg:flex-row">
       <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}"
         class="w-full md:w-[350px] rounded-md">
-      <p class="text-lg text-gray">
-        {{ $treatment->description }}
-      </p>
+      <div class="text-lg text-gray">
+        {!! $treatment->description !!}
+      </div>
     </div>
   </div>
 

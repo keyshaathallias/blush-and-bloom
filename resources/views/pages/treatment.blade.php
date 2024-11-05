@@ -16,16 +16,6 @@
 
     {{-- Cards --}}
     <div class="flex flex-wrap justify-center gap-7 mt-7">
-
-      {{-- <div
-        class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
-        <img src={{ asset('asset/product/anti-aging-serum.png') }}" alt="" class="rounded-md">
-        <div class="flex flex-wrap items-center justify-between pt-3 lg:pt-6">
-          <h3 class="text-xl lg:text-2xl font-semibold text-primary lg:w-[318px]"></h3>
-          <a href="" class="text-sm lg:text-base text-secondary">Details →</a>
-        </div>
-      </div> --}}
-
       @foreach ($treatments as $treatment)
         <div
           class="w-full md:w-[350px] lg:w-[518px] bg-white p-5 border border-light rounded-lg hover:shadow-lg transition duration-200 ease-in-out">
@@ -37,7 +27,6 @@
           </div>
         </div>
       @endforeach
-
     </div>
   </div>
 

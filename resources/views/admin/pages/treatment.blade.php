@@ -57,7 +57,7 @@
                             <img src="{{ asset('storage/img/' . $treatment->image) }}" alt="{{ $treatment->name }}" width="250">
                           </td>
                           <td>{{ $treatment->name }}</td>
-                          <td>{{ $treatment->description }}</td>
+                          <td>{!! $treatment->description !!}</td>
                           <td>
                             <a href="{{ route('treatment.edit', $treatment->slug) }}">Edit</a>
                             <form action="{{ route('treatment.destroy', $treatment->slug) }}" method="post">

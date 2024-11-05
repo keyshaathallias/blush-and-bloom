@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="/dist/assets/compiled/css/app-dark.css">
   <link rel="stylesheet" href="/dist/assets/compiled/css/iconly.css">
 
+  {{-- TinyMCE --}}
+  <script src="https://cdn.tiny.cloud/1/mye4ydek8uz6frqfwh3r5um3ihjbdbnkxamgdw9tt0b6tvka/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: 'textarea#description', // Replace this CSS selector to match the placeholder element for TinyMCE
+      plugins: 'code table lists',
+      toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+    });
+  </script>
 </head>
 
 <body>
