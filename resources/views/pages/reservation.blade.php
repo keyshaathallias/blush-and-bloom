@@ -72,7 +72,7 @@
   </div>
 
   {{-- Contact --}}
-  <div class="pb-10 md:pb-12 mx-7 lg:mx-0">
+  <div class="py-10 md:py-12 mx-7 lg:mx-0">
     <div
       class="flex mx-auto lg:mx-auto flex-col items-center justify-center gap-2 lg:gap-6 md:px-10 px-5 py-8 mb-6 shadow-lg md:flex-row md:py-4 lg:py-6 w-fit rounded-2xl lg:rounded-3xl bg-gradient-to-br from-[#FABC3F] via-[#FFCF6D] to-[#EEAB25] lg:m-0 lg:mb-10">
       <div class="pb-3 heading lg:w-[300px] xl:w-[500px] flex flex-col justify-start">
