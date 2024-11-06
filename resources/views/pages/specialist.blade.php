@@ -22,7 +22,7 @@
           class="w-[150px] lg:w-[250px] md:w-[200px] bg-white rounded-lg flex gap-1 lg:gap-6 flex-col p-3 hover:shadow-lg transition duration-200 ease-in-out border border-light">
           <img src="{{ asset('storage/img/' . $specialist->image) }}" alt="{{ $specialist->name }}">
           <h3 class="lg:text-xl text-base font-semibold lg:w-[240px] w-[130px]">{{ $specialist->name }}</h3>
-          <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">{{ $specialist->description }}</p>
+          <p class="text-xs lg:text-base lg:w-[240px] w-[130px]">{!! $specialist->description !!}</p>
         </div>
       @endforeach
 

@@ -61,7 +61,7 @@
                           </td>
                           <td>{{ $product->name }}</td>
                           <td>{{ 'Rp ' . number_format($product->price, 2, ',', '.') }}</td>
-                          <td>{{ $product->description }}</td>
+                          <td>{!! $product->description !!}</td>
                           <td>{{ $product->categories->category }}</td>
                           <td>
                             <a href="{{ route('product.edit', $product->slug) }}">Edit</a>

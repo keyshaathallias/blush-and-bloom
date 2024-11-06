@@ -55,12 +55,12 @@
             </a>
           </li>
           
-          <li class="sidebar-item {{ Request::is('category-dashboard', 'create-category', 'edit-category/*') ? 'active' : '' }}">
+          {{-- <li class="sidebar-item {{ Request::is('category-dashboard', 'create-category', 'edit-category/*') ? 'active' : '' }}">
             <a href="{{ route('categories.index') }}" class='sidebar-link'>
               <i class="bi bi-bookmark-fill"></i>
               <span>Product Category</span>
             </a>
-          </li>
+          </li> --}}
           
           <li class="sidebar-item {{ Request::is('treatment-dashboard','create-treatment', 'edit-treatment/*') ? 'active' : '' }}">
             <a href="{{ route('treatment.index') }}" class='sidebar-link'>

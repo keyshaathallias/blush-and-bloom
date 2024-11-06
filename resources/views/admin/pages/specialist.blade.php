@@ -57,7 +57,7 @@
                             <img src="{{ asset('storage/img/' . $specialist->image) }}" alt="{{ $specialist->name }}" width="250">
                           </td>
                           <td>{{ $specialist->name }}</td>
-                          <td>{{ $specialist->description }}</td>
+                          <td>{!! $specialist->description !!}</td>
                           <td>
                             <a href="{{ route('specialist.edit', $specialist->slug) }}">Edit</a>
                             <form action="{{ route('specialist.destroy', $specialist->slug) }}" method="post">

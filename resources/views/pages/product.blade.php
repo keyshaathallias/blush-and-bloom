@@ -5,7 +5,7 @@
   <div class="my-10 px-7 lg:px-10 md:my-16">
 
     {{-- Heading --}}
-    <div class="flex items-center justify-between text-secondary">
+    <div class="flex items-center justify-between text-secondary mb-7">
       <h2 class="text-2xl md:text-4xl font-italic">Our <span
           class="font-bold font-playfair-display font-italic">Products</span></h2>
       {{-- <a href="/cart" class="flex items-center gap-1 text-base md:gap-2 md:text-2xl">
