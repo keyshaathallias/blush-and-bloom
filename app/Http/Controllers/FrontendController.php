@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function showHome() {
-        $products    = Product::all();
+        $products    = Product::limit(4)->get();
         $specialists = Specialist::all();
         $treatments  = Treatment::all();
 

@@ -28,6 +28,7 @@
           <div class="flex flex-col gap-2 text-base lg:text-xl md:text-lg">
             <a href="{{ route('treatment.show') }}" class="transition duration-200 ease-in-out hover:text-gold">Acne Free Program</a>
             <a href="{{ route('treatment.show') }}" class="transition duration-200 ease-in-out hover:text-gold">Body Care Spa</a>
+            <a href="{{ route('treatment.show') }}" class="transition duration-200 ease-in-out hover:text-gold">Whitening Program</a>
           </div>
         </div>
         <div class="flex flex-col gap-4 md:gap-5">
