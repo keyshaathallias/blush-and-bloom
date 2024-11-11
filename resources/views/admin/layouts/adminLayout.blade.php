@@ -17,14 +17,42 @@
   <link rel="stylesheet" href="/dist/assets/compiled/css/iconly.css">
 
   {{-- TinyMCE --}}
-  <script src="https://cdn.tiny.cloud/1/mye4ydek8uz6frqfwh3r5um3ihjbdbnkxamgdw9tt0b6tvka/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.tiny.cloud/1/mye4ydek8uz6frqfwh3r5um3ihjbdbnkxamgdw9tt0b6tvka/tinymce/7/tinymce.min.js"
+    referrerpolicy="origin"></script>
   <script>
     tinymce.init({
-      selector: 'textarea#description', // Replace this CSS selector to match the placeholder element for TinyMCE
-      plugins: 'code table lists',
-      toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+      selector: 'textarea#description',
+      plugins: 'code table lists image',
+      toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table | image',
+      image_title: true,
+      automatic_uploads: true,
+      file_picker_types: 'image',
+      file_picker_callback: function(cb, value, meta) {
+        var input = document.createElement('input');
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+
+        input.onchange = function() {
+          var file = this.files[0];
+          var reader = new FileReader();
+          reader.onload = function() {
+            var id = 'blobid' + (new Date()).getTime();
+            var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+            var base64 = reader.result.split(',')[1];
+            var blobInfo = blobCache.create(id, file, base64);
+            blobCache.add(blobInfo);
+            cb(blobInfo.blobUri(), {
+              title: file.name
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+
+        input.click();
+      }
     });
   </script>
+
 </head>
 
 <body>

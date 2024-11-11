@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <nav aria-label="breadcrumb" class="breadcrumb-header float-start">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item" aria-current="page"><a href="">Customer</a></li>
+          <li class="breadcrumb-item" aria-current="page"><a href="">Send Email</a></li>
         </ol>
       </nav>
     </div>

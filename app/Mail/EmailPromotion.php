@@ -14,19 +14,23 @@ class EmailPromotion extends Mailable
     use Queueable, SerializesModels;
 
     public $customer;
+    public $emailContent;
 
-    public function __construct($customer) {
+    public function __construct($customer, $emailContent)
+    {
         $this->customer = $customer;
+        $this->emailContent = $emailContent;
     }
 
     public function build()
     {
-        return $this->subject('Exclusive Promotion for You!')
-                    ->view('emails.promotion')
+        return $this->subject($this->emailContent->subject)
                     ->with([
-                        'firstName' => $this->customer->first_name,
-                        'lastName'  => $this->customer->last_name,
-                    ]);
+                        'subject'    => $this->emailContent->subject,
+                        'body'       => $this->emailContent->body,
+                        'first_name' => $this->customer->first_name,
+                        'last_name'  => $this->customer->last_name])
+                    ->view('emails.promotion');
     }
 
 }

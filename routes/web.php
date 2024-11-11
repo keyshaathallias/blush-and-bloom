@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PromotionalEmailController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SpecialistController;
 use App\Http\Controllers\TreatmentController;
@@ -82,6 +83,11 @@ Route::middleware('auth')->group(function() {
     Route::post('/customer-dashboard/send-selected-emails', [ReservationController::class, 'sendSelectedEmails'])->name('customer.sendSelectedEmails');
     Route::post('/customer-dashboard/send-promotion', [ReservationController::class, 'sendPromotion'])->name('customer.sendPromotion');
     Route::delete('/delete-reservation/{slug}', [ReservationController::class, 'destroy'])->name('reservation.destroy');
+
+    // Email
+    Route::get('/email-dashboard', [PromotionalEmailController::class, 'index'])->name('email.dashboard');
+    Route::get('/edit-email/{id}', [PromotionalEmailController::class, 'edit'])->name('email.edit');
+    Route::put('/edit-email/{id}', [PromotionalEmailController::class, 'update'])->name('email.update');
 
     // User
     Route::get('/account-dashboard', [UserController::class, 'index'])->name('account.index');

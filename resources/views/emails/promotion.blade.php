@@ -480,7 +480,7 @@
                                           <td align="center" class="es-text-1589" style="padding:0;Margin:0">
                                             <h2 class="es-text-mobile-size-28"
                                               style="Margin:0;font-family:'times new roman', times, baskerville, georgia, serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:28px;font-style:normal;font-weight:normal;line-height:33.6px;color:#493628">
-                                              <em><strong> Special Gift Voucher for You! </strong></em>
+                                              <em><strong> {{ $subject }} </strong></em>
                                             </h2>
                                           </td>
                                         </tr>
@@ -522,11 +522,9 @@
                                           <td align="center" class="es-text-7862" style="padding:0;Margin:0">
                                             <p class="es-text-mobile-size-16"
                                               style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#301E18;font-size:16px">
-                                              Dear <strong>{{ $firstName }} {{ $lastName }}</strong>,<br>Thank
-                                              you for being a loyal
-                                              customer of Blush &amp; Bloom! We’re excited to offer you this exclusive
-                                              gift voucher as a token of our appreciation. Enjoy a special discount on
-                                              your next purchase at any of our offline stores.</p>
+                                              Dear <strong>{{ $first_name }} {{ $last_name }}</strong>,<br>
+                                              {!! $body !!}
+                                            </p>
                                           </td>
                                         </tr>
                                       </tbody>
@@ -554,64 +552,6 @@
                                               src="https://eprtutf.stripocdn.email/content/guids/CABINET_228d9e27d9d0cf8576c371d2e21b720ed90ba291d1808f5235c7944bdb04a390/images/voucher.png"
                                               alt="" class="adapt-img"
                                               style="display:block;font-size:14px;border:0;outline:none;text-decoration:none">
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="left"
-                            style="padding:0;Margin:0;padding-right:20px;padding-left:20px;padding-top:10px">
-                            <table width="100%" cellpadding="0" cellspacing="0" role="none"
-                              style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                              <tbody>
-                                <tr>
-                                  <td align="left" style="padding:0;Margin:0;width:560px">
-                                    <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
-                                      style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                                      <tbody>
-                                        <tr>
-                                          <td align="center" class="es-text-9855" style="padding:0;Margin:0">
-                                            <p class="es-text-mobile-size-16"
-                                              style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#301E18;font-size:16px">
-                                              <strong>Voucher Code</strong>: BNB-LOVE20
-                                            </p>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="left"
-                            style="padding:0;Margin:0;padding-top:20px;padding-right:20px;padding-left:20px">
-                            <table width="100%" cellpadding="0" cellspacing="0" role="none"
-                              style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                              <tbody>
-                                <tr>
-                                  <td align="left" style="padding:0;Margin:0;width:560px">
-                                    <table cellpadding="0" cellspacing="0" width="100%" role="presentation"
-                                      style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                                      <tbody>
-                                        <tr>
-                                          <td align="center" class="es-text-2370" style="padding:0;Margin:0">
-                                            <p class="es-text-mobile-size-16"
-                                              style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#301E18;font-size:16px">
-                                              Visit us in South Jakarta, Bandung, or Surabaya to redeem your
-                                              voucher.<br>Happy Shopping! We look forward to seeing you!</p>
-                                            <p class="es-text-mobile-size-16"
-                                              style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#301E18;font-size:16px">
-                                              <strong>Blush &amp; Bloom Team</strong>
-                                            </p>
                                           </td>
                                         </tr>
                                       </tbody>

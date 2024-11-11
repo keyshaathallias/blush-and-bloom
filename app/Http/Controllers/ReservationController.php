@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\EmailPromotion;
 use App\Mail\EmailReservation;
+use App\Models\PromotionalEmail;
 use App\Models\Reservation;
 use App\Models\Treatment;
 use Illuminate\Http\RedirectResponse;
@@ -95,9 +96,11 @@ class ReservationController extends Controller
         $customers = Reservation::selectRaw('email, MIN(first_name) as first_name, MIN(last_name) as last_name')
                                 ->groupBy('email')
                                 ->get();
-        
+                                
+        $emailContent = PromotionalEmail::latest()->first();
+
         foreach ($customers as $customer) {
-            Mail::to($customer->email)->send(new EmailPromotion($customer));
+            Mail::to($customer->email)->send(new EmailPromotion($customer, $emailContent));
         }
     
         return redirect()->back()->with('success', 'Promotional emails sent successfully to all customers!');
@@ -115,8 +118,10 @@ class ReservationController extends Controller
                                 ->groupBy('email')
                                 ->get();
     
+        $emailContent = PromotionalEmail::latest()->first();
+        
         foreach ($customers as $customer) {
-            Mail::to($customer->email)->send(new EmailPromotion($customer));
+            Mail::to($customer->email)->send(new EmailPromotion($customer, $emailContent));
         }
     
         return redirect()->back()->with('success', 'Promotional emails sent successfully to selected customers!');
